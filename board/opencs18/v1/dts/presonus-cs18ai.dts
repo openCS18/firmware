@@ -1,0 +1,317 @@
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Device tree for Presonus RM Series rack mixers
+ *
+ * Copyright (C) 2019 Roman Savrulin <romansavrulin@gmail.com>
+ */
+
+/dts-v1/;
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/linux-event-codes.h>
+#include <dt-bindings/pwm/pwm.h>
+
+#include "da850.dtsi"
+
+/ {
+	compatible = "ti,da850-evm", "ti,da850";
+	model = "Presonus RM Series";
+
+        chosen {
+                stdout-path = &serial2;
+        };
+	
+	soc@1c00000 {
+	
+	};
+
+	aliases {
+		serial0 = &serial0;
+		serial1 = &serial1;
+		serial2 = &serial2;
+		ethernet0 = &eth0;
+		spi0 = &spi1;
+	};
+
+	vbat: fixedregulator0 {
+		compatible = "regulator-fixed";
+		regulator-name = "vbat";
+		regulator-min-microvolt = <5000000>;
+		regulator-max-microvolt = <5000000>;
+		regulator-boot-on;
+	};
+
+	baseboard_3v3: fixedregulator-3v3 {
+		/* TPS73701DCQ */
+		compatible = "regulator-fixed";
+		regulator-name = "baseboard_3v3";
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+		vin-supply = <&vbat>;
+		regulator-always-on;
+		regulator-boot-on;
+	};
+
+	baseboard_1v8: fixedregulator-1v8 {
+		/* TPS73701DCQ */
+		compatible = "regulator-fixed";
+		regulator-name = "baseboard_1v8";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		vin-supply = <&vbat>;
+		regulator-always-on;
+		regulator-boot-on;
+	};
+
+	memory@c0000000 {
+		device_type = "memory";
+		reg = <0xc0000000 0x6000000>;
+	};
+
+	panel {
+		compatible = "ti,tilcdc,panel";
+		pinctrl-names = "default";
+		pinctrl-0 = <&lcd_pins>;
+		/*
+		 * The vpif and the LCD are mutually exclusive.
+		 * To enable VPIF, change the status below to 'disabled' then
+		 * then change the status of the vpif below to 'okay'
+		 */
+		status = "okay";
+		enable-gpios = <&gpio 140 GPIO_ACTIVE_HIGH>; /* lcd_panel_pwr */
+
+		panel-info {
+			ac-bias		= <255>;
+			ac-bias-intrpt	= <0>;
+			dma-burst-sz	= <16>;
+			bpp		= <16>;
+			fdd		= <0x80>;
+			sync-edge	= <0>;
+			sync-ctrl	= <1>;
+			raster-order	= <0>;
+			fifo-th		= <0>;
+		};
+
+		display-timings {
+			native-mode = <&timing0>;
+			timing0: 480x272 {
+				clock-frequency = <9000000>;
+				hactive = <480>;
+				vactive = <272>;
+				hfront-porch = <3>;
+				hback-porch = <2>;
+				hsync-len = <42>;
+				vback-porch = <3>;
+				vfront-porch = <4>;
+				vsync-len = <11>;
+				hsync-active = <0>;
+				vsync-active = <0>;
+				de-active = <1>;
+				pixelclk-active = <1>;
+			};
+		};
+	};
+	
+	/* backlight_lcd: backlight-regulator {
+		compatible = "regulator-fixed";
+		regulator-name = "lcd_backlight_pwr";
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+		gpio = <&gpio 47 GPIO_ACTIVE_HIGH>; // lcd_backlight_pwr
+		enable-active-high;
+	}; */
+};
+
+&ref_clk {
+	clock-frequency = <24000000>;
+};
+
+&pmx_core {
+	status = "okay";
+	nor_pins: nor_pins {
+		pinctrl-single,bits = <
+			/* EMA_BA0 */
+			0x14 0x10000000  0xf0000000
+			/* EMA_WAIT_1 EMA_CLK - does this needed ??? */
+			/* 0x18 0x01000001  0x0f00000f */
+			/* EMA_OE, EMA_WE, EMA_CS[2] */
+			0x1c 0x00110001  0x00ff000f
+			/*
+			 * EMA_D[8], EMA_D[9], EMA_D[10],
+			 * EMA_D[11], EMA_D[12], EMA_D[13],
+			 * EMA_D[14], EMA_D[15]
+			 */
+			0x20 0x11111111  0xffffffff
+			/*
+			 * EMA_D[0], EMA_D[1], EMA_D[2],
+			 * EMA_D[3], EMA_D[4], EMA_D[5],
+			 * EMA_D[6], EMA_D[7]
+			 */
+			0x24 0x11111111  0xffffffff
+			
+			/*
+			 * EMA_A[16],  EMA_A[17],  EMA_D[18],
+			 * EMA_A[19], EMA_A[20], EMA_A[21],
+			 * EMA_A[22]
+			 */
+			0x28 0x11111110  0xfffffff0
+			/*
+			 * EMA_A[8],  EMA_A[9],  EMA_A[10],
+			 * EMA_A[11], EMA_A[12], EMA_A[13],
+			 * EMA_A[14], EMA_A[15]
+			 */
+			0x2C 0x11111111  0xffffffff
+			/*
+			 * EMA_A[0],  EMA_A[1],  EMA_A[2],
+			 * EMA_A[3], EMA_A[4], EMA_A[5],
+			 * EMA_A[6], EMA_A[7]
+			 */
+			0x30 0x11111111  0xffffffff
+		>;
+	};
+	rmii_pins: pinmux_rmii_pins {
+		pinctrl-single,bits = <
+			/*
+			 * RMII_RXER, RMII_RXD_0, RMII_RXD_1
+			 * RMII_TXEN, RMII_TXD_0, RMII_TXD_1
+			 */
+			0x38 0x88888800 0xffffff00
+			/* RMII_MHZ_50_CLK from PHY, RMII_CRS_DV
+			 */
+			0x3c 0x00000080 0x000000ff
+		>;
+	};
+};
+
+&aemif {
+    pinctrl-names = "default";
+    pinctrl-0 = <&nor_pins>;
+    status = "okay";
+    nor:cs2 {
+	#address-cells = <2>;
+	#size-cells = <1>;
+	clock-ranges;
+	ranges;
+
+	ti,cs-chipselect = <2>;
+	ti,cs-bus-width = <16>;
+
+	/* all timings in nanoseconds */
+	ti,cs-min-turnaround-ns = <100>;
+
+	ti,cs-read-setup-ns = <50>;
+	ti,cs-read-strobe-ns = <30>;
+	ti,cs-read-hold-ns = <30>;
+
+	ti,cs-write-setup-ns = <0>;
+	ti,cs-write-strobe-ns = <35>;
+	ti,cs-write-hold-ns = <70>;
+
+	nor@0,0x8000000 {
+		compatible = "cfi-flash";
+		reg = <0 0x0000000 0x2000000>;
+		bank-width = <2>;
+		partitions {
+                                compatible = "fixed-partitions";
+                                #address-cells = <1>;
+                                #size-cells = <1>;
+
+                                partition@0 {
+                                        // The LCDK defaults to booting from this partition
+                                        label = "u-boot AIS";
+                                        reg = <0x0 0xA0000>;
+                                };
+                                partition@A0000 {
+                                        label = "uImage";
+                                        reg = <0xA0000 0x460000>;
+                                };
+                                partition@500000 {
+                                        label = "rootfs";
+                                        reg = <0x500000 0x1700000>;
+                                };
+				partition@1C00000 {
+                                        label = "sfs";
+                                        reg = <0x1C00000 0>;
+                                };
+                };
+	};
+    };
+};
+
+&wdt {
+	status = "okay";
+};
+
+&serial0 {
+	status = "okay";
+};
+
+/* Input port 1 */
+&serial1 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&serial1_rxtx_pins>;
+};
+
+&eth0 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&rmii_pins>;
+	phy-mode = "rmii";
+	ti,davinci-rmii-en;
+	/* or use this for unpatched kernel */
+	/* ti,davinci-rmii-en = /bits/ 8 <0x1>; */
+	status = "okay";
+	/*
+	add support for nvmem MAC addr https://lkml.org/lkml/2019/4/26/1086 
+	/delete-property/ local-mac-address;
+	*/
+	fixed-link {
+                speed = <100>;
+                full-duplex;
+         };
+};
+
+&lcdc {
+	status = "okay";
+};
+
+&serial2 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&serial2_rxtx_pins>;
+	status = "okay";
+};
+
+&i2c0 {
+	status = "okay";
+	clock-frequency = <400000>;
+	pinctrl-names = "default";
+	pinctrl-0 = <&i2c0_pins>;
+};
+
+&spi0 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&spi0_pins>, <&spi0_cs0_pin>, <&spi0_cs3_pin>;
+};
+
+&spi1 {
+	status = "okay";
+	pinctrl-0 = <&spi1_pins>, <&spi1_cs0_pin>;
+	pinctrl-names = "default";
+//	cs-gpios = <&gpio 44 GPIO_ACTIVE_LOW>;
+};
+
+&gpio {
+	status = "okay";
+};
+
+&usb_phy {
+	status = "okay";
+};
+
+&usb0 {
+	status = "okay";
+};
+
+&usb1 {
+	status = "okay";
+};
