@@ -256,9 +256,9 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&rmii_pins>;
 	phy-mode = "rmii";
-	ti,davinci-rmii-en;
+	/* ti,davinci-rmii-en; */
 	/* or use this for unpatched kernel */
-	/* ti,davinci-rmii-en = /bits/ 8 <0x1>; */
+	ti,davinci-rmii-en = /bits/ 8 <0x1>;
 	status = "okay";
 	/*
 	add support for nvmem MAC addr https://lkml.org/lkml/2019/4/26/1086 
