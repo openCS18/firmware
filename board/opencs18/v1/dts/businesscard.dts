@@ -1,0 +1,108 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR X11)
+/*
+ * Copyright 2019 George Hilliard <thirtythreeforty@gmail.com>
+ */
+
+/dts-v1/;
+#include "suniv-f1c100s.dtsi"
+
+#include <dt-bindings/gpio/gpio.h>
+
+/ {
+	model = "George Hilliard's business card";
+	compatible = "licheepi,licheepi-nano", "allwinner,suniv-f1c100s",
+		     "allwinner,suniv";
+
+	aliases {
+		serial0 = &uart0;
+		spi0 = &spi0;
+	};
+
+	chosen {
+		stdout-path = "serial0:115200n8";
+	};
+
+	reg_vcc3v3: vcc3v3 {
+		compatible = "regulator-fixed";
+		regulator-name = "vcc3v3";
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		pinctrl-names = "default";
+		pinctrl-0 = <&led_pins>;
+
+		heartbeat {
+			label = "Heartbeat";
+			gpios = <&pio 3 7 GPIO_ACTIVE_LOW>;
+			default-state = "on";
+			linux,default-trigger = "heartbeat";
+		};
+	};
+};
+
+&pio {
+	led_pins: led_pins {
+		pins = "PD7";
+		function = "gpio_out";
+	};
+};
+
+&spi0 {
+    pinctrl-names = "default";
+    pinctrl-0 = <&spi0_pins_a>;
+    status = "okay";
+    flash: w25q64@0 {
+        #address-cells = <1>;
+        #size-cells = <1>;
+        compatible = "winbond,w25q64", "jedec,spi-nor";
+        reg = <0>;
+        spi-max-frequency = <50000000>;
+        partitions {
+            compatible = "fixed-partitions";
+            #address-cells = <1>;
+            #size-cells = <1>;
+
+            partition@0 {
+                label = "u-boot";
+                reg = <0x000000 0x40000>;
+                //read-only;
+            };
+
+            partition@110000 {
+                label = "rootubi";
+                reg = <0x40000 0x7C0000>;
+                //read-only;
+            };
+        };
+    };
+};
+
+&mmc0 {
+	vmmc-supply = <&reg_vcc3v3>;
+	bus-width = <4>;
+	broken-cd;
+	status = "okay";
+};
+
+&otg_sram {
+	status = "okay";
+};
+
+&uart0 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart0_pe_pins>;
+	status = "okay";
+};
+
+&usb_otg {
+	dr_mode = "peripheral";
+	status = "okay";
+};
+
+&usbphy {
+	usb0_id_det-gpio = <&pio 4 2 GPIO_ACTIVE_HIGH>; /* PE2 */
+	status = "okay";
+};

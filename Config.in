@@ -1,0 +1,9 @@
+source "$BR2_EXTERNAL_OPENCS18_PATH/package/sunxi-tools-f1c100s/Config.in.host"
+source "$BR2_EXTERNAL_OPENCS18_PATH/package/sunxi-tools-f1c100s/Config.in"
+source "$BR2_EXTERNAL_OPENCS18_PATH/package/OPENCS18-flashdrive/Config.in"
+source "$BR2_EXTERNAL_OPENCS18_PATH/package/2048/Config.in"
+source "$BR2_EXTERNAL_OPENCS18_PATH/package/fortune-mod/Config.in"
+source "$BR2_EXTERNAL_OPENCS18_PATH/package/robotfindskitten/Config.in"
+source "$BR2_EXTERNAL_OPENCS18_PATH/package/rogue/Config.in"
+
+source "$BR2_EXTERNAL_OPENCS18_PATH/package/librecode/Config.in"
