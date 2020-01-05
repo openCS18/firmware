@@ -17,8 +17,10 @@
 	model = "Presonus RM Series";
 
         chosen {
-                stdout-path = &serial2;
-        };
+		stdout-path = &serial2;
+//		linux,initrd-start = <0xc0000000>;
+//		linux,initrd-end = <0xc0800000>;
+	};
 	
 	soc@1c00000 {
 	
@@ -30,6 +32,11 @@
 		serial2 = &serial2;
 		ethernet0 = &eth0;
 		spi0 = &spi1;
+	};
+
+	memory@c0000000 {
+		device_type = "memory";
+		reg = <0xc0000000 0x08000000>;
 	};
 
 	vbat: fixedregulator0 {
