@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+${DIR}/gen-bootscript.sh
+
 #grep -q "GADGET_SERIAL" "${TARGET_DIR}/etc/inittab" \
 #	|| echo '/dev/ttyGS0::respawn:/sbin/getty -L  /dev/ttyGS0 0 vt100 # GADGET_SERIAL' >> "${TARGET_DIR}/etc/inittab"
 #grep -q "ubi0:persist" "${TARGET_DIR}/etc/fstab" \
