@@ -348,7 +348,7 @@
 &usb0 {
 	status = "okay";
 	dr_mode = "host";
-	vbus-supply = <&vbat>;
+	vbus = <&vbat>; //should be vbus instead of vbus-supply
 };
 
 &usb1 {
