@@ -69,6 +69,15 @@
 		regulator-boot-on;
 	};
 
+	cvdd: regulator0 {
+		compatible = "regulator-fixed";
+		regulator-name = "cvdd";
+		regulator-min-microvolt = <1200000>;
+		regulator-max-microvolt = <1200000>;
+		regulator-always-on;
+		regulator-boot-on;
+	};
+
 	memory@c0000000 {
 		device_type = "memory";
 		reg = <0xc0000000 0x6000000>;
@@ -130,6 +139,27 @@
 
 &ref_clk {
 	clock-frequency = <24000000>;
+};
+
+&cpu {
+    cpu-supply = <&cvdd>;
+};
+
+/* since we have a fixed regulator, we can't run at these points */
+&opp_100 {
+        status = "disabled";
+};
+
+&opp_200 {
+        status = "disabled";
+};
+
+/*
+ * The SoC is actually the 456MHz version, but because of the fixed regulator
+ * This is the fastest we can go.
+ */
+&opp_375 {
+        status = "okay";
 };
 
 &pmx_core {
@@ -317,6 +347,8 @@
 
 &usb0 {
 	status = "okay";
+	dr_mode = "host";
+	vbus-supply = <&vbat>;
 };
 
 &usb1 {
