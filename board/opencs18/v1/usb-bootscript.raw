@@ -1,1 +1,1 @@
-setenv bootargs console=ttyS2,115200n8 debug earlyprintk root=/dev/ram rw;fatload usb 0:1 0xC2000000 uImage.presonus-cs18ai;bootm 0xC2000000
+setenv bootargs console=ttyS2,115200n8 debug earlyprintk ubi.mtd=rootfs root=/dev/ram rw;fatload usb 0:1 0xC2000000 uImage.presonus-cs18ai;bootm 0xC2000000
