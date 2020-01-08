@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# Exits uBoot status mode
+#
+
+DEV=/dev/ttyS1
+
+echo "Exiting uBoot status mode"
+
+stty -F $DEV speed 115200 cs8 -cstopb -parenb -isig -icanon -iexten -echo -brkint -icrnl -imaxbel -opost
+echo B001g > $DEV
+
+exit $?

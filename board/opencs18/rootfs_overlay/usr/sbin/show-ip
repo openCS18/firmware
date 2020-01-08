@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ip route get 1 | awk '{print $NF;exit}' > /dev/tty0
+
+sleep 1

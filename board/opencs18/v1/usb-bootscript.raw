@@ -1,1 +1,21 @@
-setenv bootargs console=ttyS2,115200n8 debug earlyprintk ubi.mtd=rootfs root=/dev/ram rw;fatload usb 0:1 0xC2000000 uImage.presonus-cs18ai;bootm 0xC2000000
+setenv bootargs console=ttyS2,115200n8 debug earlyprintk ubi.mtd=rootfs root=/dev/ram rw
+
+#mw.b send data to ttyS1
+
+# fill LED PB to 50%
+mw.b 0x01D0C000 0x41   #A
+mw.b 0x01D0C000 0x30   #0
+mw.b 0x01D0C000 0x33   #3
+mw.b 0x01D0C000 0x32   #2
+mw.b 0x01D0C000 0x67   #g
+
+fatload usb 0:1 0xC2000000 uImage.presonus-cs18ai
+
+# exit update status pattern
+mw.b 0x01D0C000 0x41   #A
+mw.b 0x01D0C000 0x30   #0
+mw.b 0x01D0C000 0x36   #6
+mw.b 0x01D0C000 0x36   #6
+mw.b 0x01D0C000 0x67   #g
+
+bootm 0xC2000000
