@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# Exits uBoot status mode
+#
+set -e
+
+DEV=/dev/sda1
+TTY=/dev/tty0
+
+echo "Starting flash dumper" > $TTY
+
+echo "Mounting USB drive" > $TTY
+
+mount /dev/sda1 /media > $TTY
+
+for i in 0 1 2 3
+do
+  echo "Dumping partition $i" > $TTY
+  dd if=/dev/mtdblock$i of=/media/mt$i bs=1K > $TTY
+done
+
+echo "Unmounting USB drive" > $TTY
+
+umount /media
+
+echo "Flash dump end" > $TTY
+
+exit $?
