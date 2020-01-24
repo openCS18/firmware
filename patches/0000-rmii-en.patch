@@ -1,0 +1,49 @@
+diff --git a/Documentation/devicetree/bindings/net/davinci_emac.txt b/Documentation/devicetree/bindings/net/davinci_emac.txt
+index 5e3579e72..e4b95c3ff 100644
+--- a/Documentation/devicetree/bindings/net/davinci_emac.txt
++++ b/Documentation/devicetree/bindings/net/davinci_emac.txt
+@@ -20,7 +20,7 @@ Required properties:
+ Optional properties:
+ - phy-handle: See ethernet.txt file in the same directory.
+               If absent, davinci_emac driver defaults to 100/FULL.
+-- ti,davinci-rmii-en: 1 byte, 1 means use RMII
++- ti,davinci-rmii-en: boolean, does EMAC use RMII?
+ - ti,davinci-no-bd-ram: boolean, does EMAC have BD RAM?
+ 
+ The MAC address will be determined using the optional properties
+diff --git a/drivers/net/ethernet/ti/davinci_emac.c b/drivers/net/ethernet/ti/davinci_emac.c
+index 4bf65cab7..97e0c69ac 100644
+--- a/drivers/net/ethernet/ti/davinci_emac.c
++++ b/drivers/net/ethernet/ti/davinci_emac.c
+@@ -326,7 +326,7 @@ struct emac_priv {
+ 	u32 isr_count;
+ 	u32 coal_intvl;
+ 	u32 bus_freq_mhz;
+-	u8 rmii_en;
++	bool rmii_en;
+ 	u8 version;
+ 	u32 mac_hash1;
+ 	u32 mac_hash2;
+@@ -1716,7 +1716,8 @@ davinci_emac_of_get_pdata(struct platform_device *pdev, struct emac_priv *priv)
+ 	of_property_read_u32(np, "ti,davinci-ctrl-ram-size",
+ 			     &pdata->ctrl_ram_size);
+ 
+-	of_property_read_u8(np, "ti,davinci-rmii-en", &pdata->rmii_en);
++	pdata->rmii_en = of_property_read_bool(np, "ti,davinci-rmii-en");
++	dev_info(&pdev->dev, "RMII mode enabled: %d\n", pdata->rmii_en);
+ 
+ 	pdata->no_bd_ram = of_property_read_bool(np, "ti,davinci-no-bd-ram");
+ 
+diff --git a/include/linux/davinci_emac.h b/include/linux/davinci_emac.h
+index 28e6cf135..b39ffba26 100644
+--- a/include/linux/davinci_emac.h
++++ b/include/linux/davinci_emac.h
+@@ -34,7 +34,7 @@ struct emac_platform_data {
+ 	 */
+ 	const char *phy_id;
+ 
+-	u8 rmii_en;
++	bool rmii_en;
+ 	u8 version;
+ 	bool no_bd_ram;
+ 	void (*interrupt_enable) (void);
