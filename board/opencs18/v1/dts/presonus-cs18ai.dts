@@ -339,6 +339,7 @@
 
 &gpio {
 	status = "okay";
+	ti,davinci-gpio-base = <0>;
 };
 
 &usb_phy {

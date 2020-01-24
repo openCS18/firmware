@@ -1,0 +1,36 @@
+diff --git a/Documentation/devicetree/bindings/gpio/gpio-davinci.txt b/Documentation/devicetree/bindings/gpio/gpio-davinci.txt
+index bc6b4b62d..561b5c016 100644
+--- a/Documentation/devicetree/bindings/gpio/gpio-davinci.txt
++++ b/Documentation/devicetree/bindings/gpio/gpio-davinci.txt
+@@ -21,6 +21,8 @@ Required Properties:
+ 
+ - ti,ngpio: The number of GPIO pins supported.
+ 
++- ti,davinci-gpio-base: The base address of the chip. Optional. Auto assigned if omited.
++
+ - ti,davinci-gpio-unbanked: The number of GPIOs that have an individual interrupt
+ 		            line to processor.
+ 
+diff --git a/drivers/gpio/gpio-davinci.c b/drivers/gpio/gpio-davinci.c
+index e0b025689..58125d10f 100644
+--- a/drivers/gpio/gpio-davinci.c
++++ b/drivers/gpio/gpio-davinci.c
+@@ -180,6 +180,18 @@ davinci_gpio_get_pdata(struct platform_device *pdev)
+ 
+ 	pdata->gpio_unbanked = val;
+ 
++	pdata->no_auto_base = of_property_read_bool(dn, "ti,davinci-gpio-base");
++
++	if (pdata->no_auto_base) {
++		ret = of_property_read_u32(dn, "ti,davinci-gpio-base", &val);
++		if (ret)
++			goto of_err;
++
++		dev_info(&pdev->dev, "Setting base address to %d\n", val);
++
++		pdata->base = val;
++	}
++
+ 	return pdata;
+ 
+ of_err:
