@@ -6,6 +6,7 @@
 DEV=/dev/ttyS1
 
 echo "Exiting uBoot status mode"
+echo 0 > sys/class/vtconsole/vtcon1/bind # https://www.kernel.org/doc/Documentation/fb/fbcon.txt
 
 stty -F $DEV speed 115200 cs8 -cstopb -parenb -isig -icanon -iexten -echo -brkint -icrnl -imaxbel -opost
 echo B001g > $DEV

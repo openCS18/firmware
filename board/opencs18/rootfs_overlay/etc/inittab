@@ -30,7 +30,7 @@ null::sysinit:/bin/ln -sf /proc/self/fd/2 /dev/stderr
 ttyS2::respawn:/sbin/getty -L  ttyS2 0 vt100 # GENERIC_SERIAL
 
 # Put a getty on the serial port
-tty0::respawn:/usr/sbin/show-ip # Print ip on screen
+# tty0::respawn:/usr/sbin/show-ip # Print ip on screen
 
 # Stuff to do for the 3-finger salute
 #::ctrlaltdel:/sbin/reboot

@@ -218,6 +218,24 @@
 			0x3c 0x00000080 0x000000ff
 		>;
 	};
+	spi1_cs1_pin: pinmux_spi1_cs1 {
+		pinctrl-single,bits = <
+		    /* CS1 */
+		    0x14 0x00000001 0x0000000f
+		>;
+	};
+	spi1_cs6_pin: pinmux_spi1_cs6 {
+		pinctrl-single,bits = <
+		    /* CS6 */
+		    0x10 0x00001000 0x0000f000
+		>;
+	};
+	spi1_cs7_pin: pinmux_spi1_cs7 {
+		pinctrl-single,bits = <
+		    /* CS7 */
+		    0x10 0x00000100 0x00000f00
+		>;
+	};
 };
 
 &aemif {
@@ -319,7 +337,7 @@
 };
 
 &i2c0 {
-	status = "okay";
+	status = "disabled";
 	clock-frequency = <400000>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&i2c0_pins>;
@@ -329,8 +347,8 @@
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&spi0_pins>, <&spi0_cs3_pin>;
-	spidev@3 {
-	    compatible = "spidev";
+	spidev@3 {  //audio dac (PCM4104)
+	    compatible = "menlo,m53cpld"; //simple spidev
 	    spi-max-frequency = <20000000>;
 	    reg = <3>;
 	};
@@ -338,12 +356,32 @@
 
 &spi1 {
 	status = "okay";
-	pinctrl-0 = <&spi1_pins>, <&spi1_cs0_pin>;
+	pinctrl-0 = <&spi1_pins>,
+		    <&spi1_cs0_pin>,
+		    <&spi1_cs1_pin>,
+		    <&spi1_cs6_pin>,
+		    <&spi1_cs7_pin>;
+	num-cs = <8>;
 	pinctrl-names = "default";
-	spidev@0 {
-	    compatible = "spidev";
+	spidev@0 { //LCD Scribble strip 1-4
+	    compatible = "menlo,m53cpld"; //simple spidev
 	    spi-max-frequency = <20000000>;
 	    reg = <0>;
+	};
+	spidev@1 { //LCD Scribble strip 5-8
+	    compatible = "menlo,m53cpld"; //simple spidev
+	    spi-max-frequency = <20000000>;
+	    reg = <1>;
+	};
+	spidev@6 { //LCD Scribble strip 9-12
+	    compatible = "menlo,m53cpld"; //simple spidev
+	    spi-max-frequency = <20000000>;
+	    reg = <6>;
+	};
+	spidev@7 { //LCD Scribble strip 13-6
+	    compatible = "menlo,m53cpld"; //simple spidev
+	    spi-max-frequency = <20000000>;
+	    reg = <7>;
 	};
 };
 
