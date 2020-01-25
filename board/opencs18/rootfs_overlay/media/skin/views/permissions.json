@@ -1,0 +1,22 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/permissions",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+
+		{ "type": "Label", "size": "0,10,480,24", "title": "Permissions", "style": "HeaderTitle" },
+		{ "type": "Button",	"image": "back_arrow", "name": "/mainscreen/systemPage" },
+			 
+		{ "type": "Label", "size": "90,99,80,20", "title": "Device/User:", "style": "LabelRight16" },			 
+		{ "type": "SelectBox", "size": "177,95", "image": "dropdown_large", "name": "device_list", "style": "SelectBoxLarge" },		 
+		
+		{ "type": "Label", "size": "20,194,55,20", "title": "Mix:",	"style": "LabelRight16" },
+		{ "type": "SelectBox", "size": "90,190", "image": "dropdown_medium", "name": "perm_mix",	"style": "SelectBoxLarge" },
+			 
+		{ "type": "Label", "size": "220,194,55,20", "title": "Other:", "style": "LabelRight16" },				 
+		{ "type": "SelectBox", "size": "290,190", "image": "dropdown_medium", "name": "perm_other", "style": "SelectBoxLarge" }
+	 ]
+}

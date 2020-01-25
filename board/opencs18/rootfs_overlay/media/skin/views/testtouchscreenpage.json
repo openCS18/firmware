@@ -1,0 +1,18 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "VariantView", "name": "/touchscreen-screen-choice", "children":
+		[
+			{ "type": "ImageView", "image": "touchscreen_test_1" },
+			{ "type": "ImageView", "image": "touchscreen_test_2" },
+			{ "type": "ImageView", "image": "touchscreen_test_3" },
+			{ "type": "ImageView", "image": "touchscreen_test_4" },
+			{ "type": "ImageView", "image": "touchscreen_test_5" },
+			{ "type": "ImageView", "image": "touchscreen_test_6" }
+		]
+		}
+	 ]
+}

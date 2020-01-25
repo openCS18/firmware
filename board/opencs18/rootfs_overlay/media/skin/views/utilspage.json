@@ -1,0 +1,38 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background"},
+		{ "type": "PageHeader" },
+			  
+		{  "type": "Label",  "size": "0,55,125,25",  "title": "Test Modes:",  "style": "LabelLarge" },
+        {  "type": "Label",  "size": "0,80,125,25",  "title": "Reboot Required",  "style": "Label16" },
+        {  "type": "Label",  "size": "0,94,125,25",  "title": "After Running",  "style": "Label16" },
+        {  "type": "Label",  "size": "0,108,125,25",  "title": "Test Mode",  "style": "Label16" },
+	 
+	 	{ "type": "Button", "size": "12,85, 105, 75", "name": "diagnostics", "options": "transparent" },
+			  
+		{ "type": "Toggle", "size": "125,56", "image": "utils_mardigras_icon", "name": "test-mardi-gras" },
+		{ "type": "Label",  "size": "125,135,120,20", "title": "Mardi Gras", "style": "Label16" },
+			  
+		{ "type": "Toggle", "size": "245,56", "image": "utils_meters_icon", "name": "test-meters"  },
+		{ "type": "Label",  "size": "245,135,120,20", "title": "Meters", "style": "Label16" },
+			  
+		{ "type": "Toggle", "size": "365,56", "image": "utils_all_buttons_icon", "name": "test-all-buttons" },
+		{ "type": "Label",  "size": "365,135,120,20", "title": "All Buttons", "style": "Label16"  },
+			  
+		{ "type": "Toggle", "size": "0,170", "image": "utils_rgb_icon", "name": "test-rgb-buttons" },
+		{ "type": "Label",  "size": "0,249,120,20", "title": "RGB Buttons", "style": "Label16" },
+				
+		{ "type": "Toggle", "size": "125,170", "image": "utils_scribble_icon", "name": "test-scribble-image" },
+		{ "type": "Label",  "size": "125,249,120,20", "title": "Scribble Strip", "style": "Label16" },
+				
+		{ "type": "Toggle", "size": "245,170", "image": "utils_touchscreen_icon", "name": "test-touchscreen" },
+		{ "type": "Label",  "size": "245,249,120,20", "title": "Screen Test", "style": "Label16" },
+				
+		{ "type": "Toggle", "size": "365,170", "image": "utils_faders_icon", "name": "test-faders" },
+		{ "type": "Label",  "size": "365,249,120,20", "title": "Faders", "style": "Label16" }				
+	]
+}

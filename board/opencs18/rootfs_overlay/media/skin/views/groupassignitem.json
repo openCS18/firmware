@@ -1,0 +1,13 @@
+{
+	"children" :
+	[
+	 { "type": "Toggle", "size": "0,0", "name": "assign_slot_$i", "image": "group_edit" },
+	 
+	 { "type": "VariantView", "name": "assign_slot_$i", "size": "0,0,91,44", "children" :
+		[
+		 { "type": "TextBox", "size": "0,0,91,44", "name": "assign_slot_name_$i", "style": "ButtonLabel16" },
+		 { "type": "TextBox", "size": "0,0,91,44", "name": "assign_slot_name_$i", "style": "BlackButtonLabel16GroupEdit" }
+		]
+	 }
+	]
+}

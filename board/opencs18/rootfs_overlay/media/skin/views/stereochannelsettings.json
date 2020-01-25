@@ -1,0 +1,32 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/st_ch_info",
+	"children" :
+	[
+	 
+	 
+	 
+	 { "type": "VariantView", "name": "digitalChannel", "children" :
+	 [
+	  {  },
+	  {  "children":
+	  [
+	   
+	   { "type": "Label",  "size": "50,82,100,24",	"title": "Input Source:", "style": "LabelLeft16" },
+	   { "type": "SelectBox", "size": "150,80", "image": "dropdown_medium",	"name": "dig_in", "style": "SelectBoxMediumCenter" }
+
+	   
+
+	   ]
+	  }
+	  ]
+	 }
+	 
+	 
+	 
+	 
+
+	]
+}

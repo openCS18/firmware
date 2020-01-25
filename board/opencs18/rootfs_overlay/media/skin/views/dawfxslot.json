@@ -1,0 +1,25 @@
+{
+	"children" :
+	[
+		{ "type": "RadioButton", "size": "0,0", "image": "dawFx_slot", "name": "edit_$i", "radiovalue":1 },
+		{ "type": "Toggle", "size": "70,0,260,28", "name": "edit_$i", "options": "transparent" },
+		{ "type": "TextBox", "size": "3,0,15,28", "name": "num_$i", "style": "LabelRight16" },		
+		{ "type": "TextBox", "size": "70,0,260,28", "name": "name_$i", "style": "ButtonLabelLargeLeft" },
+		{ "type": "VariantView", "name": "used_$i", "children" : 
+			[
+				{},	
+				{ "children" : 
+					[
+						{ "type": "Toggle", "size": "30,0", "image": "dawFx_slot_bypass", "name": "bypass_$i"},
+						{ "type": "VariantView", "name": "has-slider_$i", "size": "200,0,250,30", "children" : 
+							[
+								{},
+								{ "type": "Slider",	"name": "slider_$i", "size": "0,4,150,20", "style": "SliderBlueStyle" }
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

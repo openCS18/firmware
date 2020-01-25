@@ -1,0 +1,28 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/comp",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "dynamics_background", "children" :
+			[
+				{ "type": "PageHeader" },
+				{ "type": "Label", "size": "12,60,130,25", "title": "Compressor",	"style": "LabelLarge" },
+				  
+				{ "type": "Toggle", "size": "45,120", "image": "compressor_button", "title": "Auto", "name": "auto_mode", "style": "ButtonLabel16",	"options": "wantfocus"  },
+				{ "type": "Toggle", "size": "45,190", "image": "compressor_button", "title": "Soft", "name": "soft_knee", "style": "ButtonLabel16", "options": "wantfocus"  },
+				  
+				{	"type": "CurveView",
+					"size": "216,57,248,207",
+					"image": "",
+					"handle": "eq_ball",
+				  	"offLineColor": "#666666",
+					"style": { "forecolor": "#98a0ac" },
+					"name" : "on",
+				  	"params": { "ratio": "ratio", "threshold": "threshold" }
+				}			  
+			]
+		}
+	 ]
+}

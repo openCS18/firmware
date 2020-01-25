@@ -1,0 +1,75 @@
+{
+	"width": 480, 
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/capture", 
+	"children":
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+		{ "type": "Label",  "size": "0,10,480,24", "title": "Capture", "style": "HeaderTitle" },
+		{ "type": "Button",	"image": "back_arrow", "name": "/mainscreen/startPage" },
+
+		{ "type": "VariantView", "name": "dialog/dialogActive", "children" : 
+			[
+				{ "type": "VariantView", "name": "daw-progress", "children" : 
+					[
+						{ "type": "VariantView", "name": "document-active", "children" : 
+							[
+  								{ "size": "40,0", "children":
+									[						
+										{ "type": "Button", "size": "10,116,94,88", "image": "capture_newsession", "name": "new-session" },			  
+										{ "type": "Label",  "size": "0,184,94,20", "title": "New Session", "style": "Label16" },
+
+										{ "type": "Button", "size": "150,116,94,88", "image": "capture_recordnow", "name": "record-now" },			  
+										{ "type": "Label",  "size": "150,184,94,20", "title": "Record Now", "style": "Label16" },
+
+										{ "type": "Button", "size": "300,116,94,88", "image": "capture_opensession", "name": "open-session" },			  
+										{ "type": "Label",  "size": "300,184,94,20", "title": "Open Session", "style": "Label16" }
+									]				
+								},
+  								{  "children":
+									[							
+										{ "type": "Button", "size": "430,55", "image": "capture_closesession", "name": "close-session" },					
+						
+										{ "type": "TextBox", "size": "10,65,420,24", "name": "document-title", "style": "Label18Trimmed" },
+
+										{ "type": "TextBox", "size": "0,105,160,24", "name": "record-duration", "style": "LabelLarge" },
+										{ "type": "Label",  "size": "0,135,160,20", "title": "Record Duration", "style": "LabelDim16" },				
+
+										{ "type": "TextBox", "size": "160,100,160,34", "name": "transport-time", "style": "HugeDigits" },
+										{ "type": "Label",  "size": "160,135,160,20", "title": "Current Time", "style": "LabelDim16" },
+
+										{ "type": "TextBox", "size": "320,105,160,24", "name": "record-disk-space", "style": "LabelLarge" },
+										{ "type": "Label",  "size": "320,135,160,20", "title": "Remaining Time", "style": "LabelDim16" },
+						
+										{ "type": "VariantView", "name": "recording", "children" : 
+											[							
+				  								{  "children":
+													[
+														{ "type": "Toggle", "size": "140,180", "image": "capture_armall", "name": "arm-all" },	
+														{ "type": "Label",  "size": "120,225,80,20", "title": "Arm All", "style": "Label16" },
+
+														{ "type": "Toggle", "size": "273,172", "image": "capture_soundcheck", "name": "soundcheck" },	
+														{ "type": "Label",  "size": "240,225,160,20", "title": "Virtual Soundcheck", "style": "Label16" }
+													]
+												},
+				  								{  "children":
+													[												
+														{ "type": "Toggle", "size": "210,165", "image": "capture_recordlock", "name": "record-lock" },	
+														{ "type": "Label",  "size": "160,225,160,20", "title": "Record Lock", "style": "Label16" }
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{ "type": "Label",  "size": "0,150,480,24", "title": "Please wait...", "style": "LabelLarge" }
+					]
+				},
+				{ "type": "DawDialog" }
+			]
+		}
+	]
+}

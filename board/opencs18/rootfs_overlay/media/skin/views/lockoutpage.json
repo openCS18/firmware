@@ -1,0 +1,60 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/lockout",
+	"children" :
+	[
+				{ "type": "ImageView", "image": "blank_background" },
+				
+				{ "type": "Label",  "size": "0,10,480,24",	"title": "Lockout Screen", "style": "HeaderTitle" },
+				{ "type": "Button",	"image": "back_arrow", "name": "/mainscreen/systemPage" },
+			 
+				{
+					  "type": "Toggle",
+					  "size": "20,55",
+					  "title": "Fat Channel",
+					  "image": "button_large",
+					  "name": "fatch",
+					  "style": "ButtonLabel16"
+				},
+		 
+				{
+					 "type": "Toggle",
+					 "size": "20,100",
+					 "title": "Faders",
+					 "image": "button_large",
+					 "name": "faders",
+					 "style": "ButtonLabel16"
+				},
+			 
+				{
+					 "type": "Toggle",
+					 "size": "20,145",
+					 "title": "Mixes",
+					 "image": "button_large",
+					 "name": "mixes",
+					 "style": "ButtonLabel16"
+				},
+	  
+				{
+					 "type": "Toggle",
+					 "size": "20,190",
+					 "title": "GEQ",
+					 "image": "button_large",
+					 "name": "geq",
+					 "style": "ButtonLabel16"
+				},
+			 
+				{
+					 "type": "Toggle",
+					 "size": "20,235",
+					 "title": "Scenes",
+					 "image": "button_large",
+					 "name": "scenes",
+					 "style": "ButtonLabel16"
+				}
+			]
+		}
+	 ]
+}

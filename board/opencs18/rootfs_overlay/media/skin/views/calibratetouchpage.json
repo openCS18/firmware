@@ -1,0 +1,24 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+		{ "type": "Label", "size": "155,130,180,25", "title": "Touch the X", "style": "LabelLarge" },
+
+		{ "type": "VariantView", "name": "targetnumber", "size": "0,0,480,272", "children" :
+		[
+		 	{ "type": "Button", "size": "20,40,80,30", "title": "X", "style": "ButtonLabel24", "options": "transparent" },
+			{ "type": "Button", "size": "20,130,80,30", "title": "X", "style": "ButtonLabel24", "options": "transparent" },
+			{ "type": "Button", "size": "20,210,80,30", "title": "X", "style": "ButtonLabel24", "options": "transparent" },
+			{ "type": "Button", "size": "200,40,80,30", "title": "X", "style": "ButtonLabel24", "options": "transparent" },
+			{ "type": "Button", "size": "200,210,80,30", "title": "X", "style": "ButtonLabel24", "options": "transparent" },
+			{ "type": "Button", "size": "380,40,80,30", "title": "X", "style": "ButtonLabel24", "options": "transparent" },
+			{ "type": "Button", "size": "380,130,80,30", "title": "X", "style": "ButtonLabel24", "options": "transparent" },
+			{ "type": "Button", "size": "380,210,80,30", "title": "X", "style": "ButtonLabel24", "options": "transparent" },
+			{}
+		]
+		}
+	 ]
+}

@@ -1,0 +1,48 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/audiorouting",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+		
+		{ "type": "Button",	"image": "back_arrow",	"name": "/mainscreen/systemPage" },
+		{ "type": "Label", "size": "0,10,480,24", "title": "Digital Output Routing", "style": "HeaderTitle" },
+	 
+		{ "type": "Label", "size": "0,62,55,20", "title": "37/38:", "style": "LabelRight16" },
+		{ "type": "SelectBox", "size": "67,58",	"image": "dropdown_medium",	"name": "aux_route_01", "style": "SelectBoxLarge" },
+		
+		{ "type": "Label", "size": "200,58,105,20", "title": "- Capture Master", "style": "LabelRight16" },
+		
+		{ "type": "Label", "size": "0,97,55,20", "title": "35/36:",	"style": "LabelRight16" },				 
+		{ "type": "SelectBox",	"size": "67,93", "image": "dropdown_medium", "name": "aux_route_02", "style": "SelectBoxLarge" },
+		
+		{ "type": "Label", "size": "0,132,55,20", "title": "37/38:", "style": "LabelRight16" },
+		{ "type": "SelectBox", "size": "67,128", "image": "dropdown_medium", "name": "aux_route_03", "style": "SelectBoxLarge" },
+			 
+		{ "type": "Label", "size": "0,167,55,20", "title": "39/40:", "style": "LabelRight16" },
+		{ "type": "SelectBox", "size": "67,163", "image": "dropdown_medium", "name": "aux_route_04", "style": "SelectBoxLarge" },
+			 
+		{ "type": "Label", "size": "0,202,55,20", "title": "41/42:", "style": "LabelRight16" },			 
+		{ "type": "SelectBox", "size": "67,198", "image": "dropdown_medium", "name": "aux_route_05", "style": "SelectBoxLarge" },			 
+		
+		{ "type": "Label", "size": "0,237,55,20", "title": "43/44:", "style": "LabelRight16" },
+		{ "type": "SelectBox", "size": "67,233", "image": "dropdown_medium", "name": "aux_route_06", "style": "SelectBoxLarge" },
+			 
+		{ "type": "Label", "size": "240,97,55,20", "title": "45/46:", "style": "LabelRight16" },				 
+		{ "type": "SelectBox",	"size": "307,93", "image": "dropdown_medium", "name": "aux_route_07", "style": "SelectBoxLarge" },
+				
+		{ "type": "Label", "size": "240,132,55,20", "title": "47/48:", "style": "LabelRight16" },
+		{ "type": "SelectBox", "size": "307,128", "image": "dropdown_medium", "name": "aux_route_08", "style": "SelectBoxLarge" },
+			 
+		{ "type": "Label", "size": "240,167,55,20", "title": "49/50:", "style": "LabelRight16" },
+		{ "type": "SelectBox", "size": "307,163", "image": "dropdown_medium", "name": "aux_route_09", "style": "SelectBoxLarge" },
+		
+		{ "type": "Label", "size": "240,202,55,20", "title": "51/52:", "style": "LabelRight16" },
+		{ "type": "SelectBox", "size": "307,198", "image": "dropdown_medium", "name": "aux_route_10", "style": "SelectBoxLarge" },
+				 
+		{ "type": "Label", "size": "240,237,55,20", "title": "S/PDIF:", "style": "LabelRight16" },
+		{ "type": "SelectBox", "size": "307,233", "image": "dropdown_medium", "name": "aux_route_11", "style": "SelectBoxLarge" }				 
+	 ]
+}

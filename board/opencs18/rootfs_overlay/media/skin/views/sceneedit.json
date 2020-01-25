@@ -1,0 +1,18 @@
+{
+	"controller":"mainscreen/scenes",
+	"children" :
+	[
+		{ "type": "Label",  "size": "0,0,480,30", "title": "Edit Scene", "style": "Label24" },
+		{ "type": "Button",	"size": "17,0", "image": "button_small", "title": "Cancel", "name": "edit_cancel", "style": "ButtonLabelMedium" },
+		{ "type": "Button",	"size": "380,0", "image": "button_small", "title": "Done", "name": "edit_done", "style": "ButtonLabelMedium" },
+		{ "type": "Button",	"size": "380,140", "image": "button_small", "title": "Delete", "name": "edit_delete", "style": "ButtonLabelMedium" },
+			  
+		{ "type": "Label",  "size": "0,86,145,20", "title": "Name:", "style": "LabelRight16" },
+		{ "type": "ImageView", "image": "button_large", "size": "160,83",
+		  "children":
+			[
+				{"type": "EditBox", "size":"0,0,134,28", "name": "edit_name", "style": "Label16" }
+			]
+		}
+	 ]
+}

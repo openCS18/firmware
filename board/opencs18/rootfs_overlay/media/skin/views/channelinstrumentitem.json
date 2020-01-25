@@ -1,0 +1,12 @@
+{
+	"children" :
+	[
+		 { "type": "Toggle",  "size": "0,0", "image": "channel_instr_list_item", "name": "instr-selected_$i" },
+		 { "type": "VariantView", "name": "instr-selected_$i", "size": "0,0,165,28", "children" :
+			[
+			 { "type": "TextBox", "name": "instr-name_$i", "size": "0,0,165,28", "style": "PresetTextItem1" },
+			 { "type": "TextBox", "name": "instr-name_$i", "size": "0,0,165,28", "style": "PresetTextItem2" }
+			]
+		 }
+	]
+}

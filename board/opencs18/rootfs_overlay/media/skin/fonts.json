@@ -1,0 +1,13 @@
+[
+	{"name": "Nimbus10", "file": "fonts/Nimbus10.fnt"},
+	{"name": "Nimbus12", "file": "fonts/Nimbus12.fnt"},
+	{"name": "Nimbus14", "file": "fonts/Nimbus14.fnt"},
+	{"name": "Nimbus16", "file": "fonts/Nimbus16.fnt", "default": true},
+	{"name": "Nimbus18", "file": "fonts/Nimbus18.fnt"},
+	{"name": "Nimbus24", "file": "fonts/Nimbus24.fnt"},
+	
+	{"name": "Nimbus34Digits", "file": "fonts/Nimbus34Digits.fnt"},
+ 
+	{"name": "Nimbus16Mono", "file": "fonts/Nimbus16Mono.fnt", "monochrome": true, "default": true},
+	{"name": "Nimbus24Mono", "file": "fonts/Nimbus24Mono.fnt", "monochrome": true}
+]

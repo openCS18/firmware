@@ -1,0 +1,52 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/auxsub_settings",
+	"children" :
+	[
+		{ "type": "RadioButton", "size": "10,70", "image": "button_small", "name": "auxbusmode", "radiovalue": 0, "title": "Aux", "style": "ButtonLabel16" },
+		{ "type": "RadioButton", "size": "10,110", "image": "button_small", "name": "auxbusmode",	"radiovalue": 1, "title": "Sub", "style": "ButtonLabel16" },
+
+		{ "type": "Toggle", "size": "160,70", "image": "button_wide", "name": "aux_link",	"title": "Link Mix", "style": "ButtonLabel16" },
+	 
+	 
+		{ "type": "VariantView", "name": "busHasDelay", "size": "160,125", "children" :
+			[
+				{ },
+				{ "children" :
+					[
+					 { "type": "Label", "size": "0,0,120,17", "title": "Output Delay:", "style": "LabelLeft16"  },
+					 
+					 { "type": "ImageView", "image": "button_wide", "size": "0,20,265,28", "children" :
+						[
+ 						  { "type": "Slider", "size": "0,0,265,28",  "name": "busdelay", "style": "SliderBlueStyle" },
+						  { "type": "TextBox", "size": "0,0,265,28",  "name": "busdelay", "style": "Label16" }
+						 
+						]
+					 }
+					]
+				}
+			]
+		},
+	 
+		{ "type": "VariantView", "name": "auxbusmode", "size": "0,200", "children" :
+			[
+			 { "children" :
+				[
+				 { "type": "RadioButton", "size": "160,0", "image": "radio_small_left", "name": "auxpremode", "radiovalue": 0, "title": "Pre 1", "style": "ButtonLabel16" },
+				 { "type": "RadioButton", "size": "240,0", "image": "radio_small_center", "name": "auxpremode", "radiovalue": 1, "title": "Pre 2", "style": "ButtonLabel16" },
+				 { "type": "RadioButton", "size": "320,0", "image": "radio_small_right", "name": "auxpremode",	"radiovalue": 2, "title": "Post", "style": "ButtonLabel16" }
+				]
+			 },
+			 { "children" :
+				[
+				 { "type": "Button", "size": "10,0", "image": "button_small", "name": "/mainscreen/subAssignPage", "title": "Edit", "style": "ButtonLabel16"  },
+				 { "type": "Toggle", "size": "160,0", "image": "button_medium", "name": "asn_main",	"title": "Main", "style": "ButtonLabel16" },
+				 { "type": "Toggle", "size": "290,0", "image": "button_medium", "name": "asn_mono",	"title": "Mono", "style": "ButtonLabel16" }
+				]
+			 }
+			]
+		}
+	 ]
+}

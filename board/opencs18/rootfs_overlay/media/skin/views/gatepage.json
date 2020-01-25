@@ -1,0 +1,34 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/gate",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "dynamics_background", "children" :
+			 [
+				{ "type": "PageHeader" },
+				{ "type": "Label", "size": "12,60,60,25",  "title": "Gate", "style": "LabelLarge" },
+				{ "type": "Label", "size": "155,65,60,18", "title": "Key",	"style": "Label16" },				
+				{ "type": "Label", "size": "155,85,60,18", "title": "Filter", "style": "Label16"},				
+				
+				{ "type": "Slider",  "name": "key_filter", "size": "175,107,22,141", "style": "SliderBlueStyle", "options": "vertical" },			  
+				{ "type": "Label", "size": "16,100,120,20",	 "title": "Side Chain Input:", "style": "LabelLeft16" },			  
+				{ "type": "SelectBox", "size": "16,125", "image": "dropdown_small",	"name": "side_chain", "style": "SelectBoxLarge"	},
+			  
+			  	{ "type": "Toggle",  "size": "15,204",  "image": "eq_button", "title": "Exp.", "name": "expander",  "style": "BlackButtonLabel16", "options": "wantfocus" },			  
+				{ "type": "Toggle",  "size": "86,204",  "image": "eq_button", "title": "Key",  "name": "key_listen", "style": "BlackButtonLabel16",  "options": "wantfocus" },			  
+				{
+					"type": "CurveView",
+					"size": "216,57,248,207",
+					"image": "",
+					"handle": "eq_ball",
+					"offLineColor": "#666666",
+					"style": { "forecolor": "#98a0ac" },
+					"name" : "on",
+					"params": { "expander": "expander", "threshold": "threshold" }
+				}
+			]
+		}
+	 ]
+}

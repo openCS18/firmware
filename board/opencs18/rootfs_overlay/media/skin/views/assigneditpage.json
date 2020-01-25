@@ -1,0 +1,44 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/assign_edit",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background", "children" :
+			[
+			 { "type": "PageHeader"  },
+			 { "type": "Label", "size": "0,54,480,24", "title": "Subgroup Assign:", "style": "HeaderTitle" },
+			 
+			 { "type": "VariantView", "name": "hasSubgroups", "children" :
+				[
+				 { "type": "Label", "size": "0,110,480,100", "title": "No Subgroups Available", "style": "LabelLarge" },
+				 { "children" :
+					[
+					 { "type": "SubAssignItem", "size": "0,92", "def": { "$i": "01"} },
+					 { "type": "SubAssignItem", "size": "120,92", "def": { "$i": "02"} },
+					 { "type": "SubAssignItem", "size": "240,92", "def": { "$i": "03"}  },
+					 { "type": "SubAssignItem", "size": "360,92", "def": { "$i": "04"}  },
+			 
+					 { "type": "SubAssignItem", "size": "0,136", "def": { "$i": "05"} },
+					 { "type": "SubAssignItem", "size": "120,136", "def": { "$i": "06"} },
+					 { "type": "SubAssignItem", "size": "240,136", "def": { "$i": "07"} },
+					 { "type": "SubAssignItem", "size": "360,136", "def": { "$i": "08"} },
+			 
+					 { "type": "SubAssignItem", "size": "0,180", "def": { "$i": "09"} },
+					 { "type": "SubAssignItem", "size": "120,180", "def": { "$i": "10"} },
+					 { "type": "SubAssignItem", "size": "240,180", "def": { "$i": "11"} },
+					 { "type": "SubAssignItem", "size": "360,180", "def": { "$i": "12"} },
+			 
+					 { "type": "SubAssignItem", "size": "0,224", "def": { "$i": "13"} },
+					 { "type": "SubAssignItem", "size": "120,224", "def": { "$i": "14"} },
+					 { "type": "SubAssignItem", "size": "240,224", "def": { "$i": "15"} },
+					 { "type": "SubAssignItem", "size": "360,224", "def": { "$i": "16"} }
+					]
+				 }
+				]
+			 }
+			]
+		}
+	 ]
+}

@@ -1,0 +1,10 @@
+{
+	"children" :
+	[
+	
+		{ "type": "TextBox", "size": "0,0,30,15", "name": "band-freq-$i", "style": "Label12" },
+		{ "type": "Slider",  "name": "band-gain-$i", "size": "2,20,26,115", "style": "SliderBlueStyle", "options": "vertical,centered" },
+		{ "type": "TextBox", "size": "0,140,30,15", "name": "band-gain-$i", "style": "Label12" }
+			
+	]
+}

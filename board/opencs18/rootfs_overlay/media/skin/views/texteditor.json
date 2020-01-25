@@ -1,0 +1,26 @@
+{
+	"width": 480,
+	"height": 272,
+	"children" :
+	[
+		{ "type": "ImageView", "width": 480, "height": 272, "options": "colorize", "style": {"backcolor": "#000000"} },		
+		
+		{ "type": "TextBox", "name": "prompt", "size": "0,1,480,18", "style": "ButtonLabelMedium" },
+		{ "type": "TextInputBox", "name": "preview", "size": "10,26,430,24", "style": "ButtonLabelLargeLeft" },
+		{ "type": "Button", "size": "440,30", "image": "keyboard_clear", "name": "clear" },
+		
+		{ "type": "TouchKeyboard", "size": "8,70,460,232",	"name": "keyInput",
+			"style": 
+			{
+				"font": "Nimbus16",
+				"keyspacing": 4,
+				"rowspacing": 8,
+				"keywidth": 38,
+				"keycolor": "#d3d3d6",
+				"pressedkeycolor": "#e8e8eb",
+				"keycolor2": "#8b8a8a",
+				"pressedkeycolor2": "#aaaaaa"				
+			}
+		}			
+	]
+}

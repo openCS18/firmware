@@ -1,0 +1,44 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller":"mainscreen/wifi",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background" },
+	 
+		{ "type": "Button",	"image": "back_arrow",	"name": "/mainscreen/networkPage" },
+		
+		{ "type": "Label", "size": "64,12,100,20", "title": "Network:", "style": "HeaderLabelLeft16" },
+		{ "type": "TextBox", "size": "150,12,135,20", "name": "activenetwork", "style": "Label16" },
+	 
+		{ "type": "Label", "size": "375,6,100,20", "title": "CS18AI IP:", "style": "HeaderLabelLeft16" },
+		{ "type": "TextBox", "size": "375,21,100,20", "name": "/mainscreen/ucnet/wirelessIP", "style": "HeaderLabelLeft16" },
+	 
+		{ "type": "Label", "size": "15,60,200,20", "title": "Select a Wireless Network:", "style": "HeaderLabelLeft16" },
+	 
+		
+		{ "type": "VariantView", "name": "has-selection",	"size": "280,53,120,30", "children":
+			[
+				{ },
+				{ "type": "Button", "title": "Connect", "style": "ButtonLabelMedium", "image": "button_medium", "name": "connect" }
+			]
+		},
+		
+	 	{
+			"size": "0,0,480,272", "children" :
+			[
+				{ "type": "WifiItem", "size": "10,90",  "def": { "$i": "1"} },
+				{ "type": "WifiItem", "size": "10,125", "def": { "$i": "2"} },
+				{ "type": "WifiItem", "size": "10,160", "def": { "$i": "3"} },
+				{ "type": "WifiItem", "size": "10,195", "def": { "$i": "4"} },
+				{ "type": "WifiItem", "size": "10,230", "def": { "$i": "5"} },
+			 
+				{ "type": "Button",	"size": "422,49", "image": "arrow_page_up", "name": "page-up" },
+				{ "type": "Button",	"size": "422,100", "image": "arrow_up", "name": "one-up"	},
+				{ "type": "Button",	"size": "422,172", "image": "arrow_down", "name": "one-down"	},
+				{ "type": "Button", "size": "422,223", "image": "arrow_page_down",	"name": "page-down" }															
+			]
+		 }
+	 ]
+}

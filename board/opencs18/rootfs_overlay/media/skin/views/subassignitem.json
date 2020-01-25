@@ -1,0 +1,23 @@
+{
+	"children" :
+	[
+	 { "type": "ImageView", "image": "grid_button" },
+	 { "type": "VariantView", "name": "slot_bus_mode_$i", "children" :
+		[
+		 { "type": "TextBox", "size": "0,0,119,43", "name": "slot_chname_$i", "style": "ButtonLabel16Dim" },
+		 { "children":
+			[
+			 { "type": "Toggle", "size": "0,0", "name": "slot_assign_$i", "image": "grid_button" },
+		 
+			 { "type": "VariantView", "name": "slot_assign_$i", "children" :
+				[
+				 { "type": "TextBox", "size": "0,0,119,43", "name": "slot_chname_$i", "style": "ButtonLabel16" },
+				 { "type": "TextBox", "size": "0,0,119,43", "name": "slot_chname_$i", "style": "BlackButtonLabel16GroupEdit" }
+				]
+			 }
+			]
+		 }
+		]
+	 }
+	]
+}

@@ -1,0 +1,50 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background" },
+		{ "type": "PageHeader" },
+			  
+		{ "type": "VariantView", "name": "mainscreen/ucnet/mixerConnected",  "size": "0,0,480,272", "children" :
+			[
+				{ 
+					"children" :
+					[
+						{ "type": "Label",  "size": "0,125,480,24", "title": "Scenes are available when connected", "style": "Label24" },
+						{ "type": "Label",  "size": "0,149,480,24", "title": "to a mixer.", "style": "Label24" }
+					]
+				},
+				{ 
+					"size": "0,0,480,272", "controller":"mainscreen/scenes", "children" :
+					[
+						{ "type": "SceneItem", "size": "5,60",  "def": { "$i": "1"} },
+						{ "type": "SceneItem", "size": "5,103", "def": { "$i": "2"} },
+						{ "type": "SceneItem", "size": "5,146", "def": { "$i": "3"} },
+						{ "type": "SceneItem", "size": "5,189", "def": { "$i": "4"} },
+						{ "type": "SceneItem", "size": "5,232", "def": { "$i": "5"} },
+						{ "type": "SceneItem", "size": "5,275", "def": { "$i": "6"} },
+						  
+						{ "type": "Button",	"size": "220,60", "image": "arrow_page_up", "name": "page-up" },
+						{ "type": "Button",	"size": "220,110", "image": "arrow_up", "name": "one-up"	},
+						{ "type": "Button",	"size": "220,170", "image": "arrow_down", "name": "one-down"	},
+						{ "type": "Button", "size": "220,222", "image": "arrow_page_down",	"name": "page-down" },
+						
+						{ "type": "Toggle", "size": "265,60", "image": "scene_button", "title": "Name",	"name": "filter_name", "style": "ScenesButtonLabel" },
+						{ "type": "Toggle", "size": "265,103", "image": "scene_button", "title": "FX",	"name": "filter_fx", "style": "ScenesButtonLabel" },
+						{ "type": "Toggle", "size": "265,146", "image": "scene_button", "title": "EQ and Dyn",	"name": "filter_eq_dyn", "style": "ScenesButtonLabel" },
+						{ "type": "Toggle", "size": "265,189", "image": "scene_button", "title": "Aux Mix",	"name": "filter_aux_mix", "style": "ScenesButtonLabel" },
+						
+						{ "type": "Toggle", "size": "375,60", "image": "scene_button", "title": "Preamps",	"name": "filter_preamps", "style": "ScenesButtonLabel" },
+						{ "type": "Toggle", "size": "375,103", "image": "scene_button", "title": "GEQ",	"name": "filter_geq", "style": "ScenesButtonLabel" },
+						{ "type": "Toggle", "size": "375,146", "image": "scene_button", "title": "DCA Groups",	"name": "filter_dca_groups", "style": "ScenesButtonLabel" },
+						{ "type": "Toggle", "size": "375,189", "image": "scene_button", "title": "Faders",	"name": "filter_faders", "style": "ScenesButtonLabel" },
+						{ "type": "Toggle", "size": "265,232", "image": "scene_button", "title": "Assigns",	"name": "filter_assigns", "style": "ScenesButtonLabel" }
+				
+					]
+				}
+			]
+		}
+	 ]
+}

@@ -1,0 +1,380 @@
+[
+	{
+		"name": "PageBack",
+		"backcolor": "#202327"
+	},
+	{
+		"name": "LabelLarge",
+		"font": "Nimbus24",
+		"textcolor": "#FFFFFF", 
+		"textalign": "center"
+	},
+	{
+		 "name": "Label8",
+		 "font": "Nimbus8",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "center"
+	},
+	{
+		 "name": "Label12",
+		 "font": "Nimbus12",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "center"
+	},
+	{
+		"name": "Label14",
+		"font": "Nimbus14",
+		"textcolor": "#FFFFFF",
+		"textalign": "center"
+	},
+	{
+		"name": "Label16",
+		"font": "Nimbus16",
+		"textcolor": "#FFFFFF",
+		"textalign": "center"
+	},
+	{
+		"name": "Label18",
+		"font": "Nimbus18",
+		"textcolor": "#FFFFFF",
+		"textalign": "center"
+	},
+	{
+		"name": "Label18Trimmed",
+		"font": "Nimbus18",
+		"textcolor": "#FFFFFF",
+		"textalign": "center",
+   	    "texttrim": "middle"
+	},
+	{
+		 "name": "LabelLeft14",
+		 "font": "Nimbus14",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "left"
+	},
+	{
+		"name": "LabelLeft16",
+		"font": "Nimbus16",
+		"textcolor": "#FFFFFF",
+		"textalign": "left"
+	},
+	{
+		 "name": "LabelLeft24",
+		 "font": "Nimbus24",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "left"
+	},
+	{
+		 "name": "LabelRight14",
+		 "font": "Nimbus14",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "right"
+	},
+	{
+		 "name": "LabelRight16",
+		 "font": "Nimbus16",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "right"
+	},
+	{
+		"name": "Label24",
+		"font": "Nimbus24",
+		"textcolor": "#FFFFFF",
+		"textalign": "center"
+	},
+	{
+		"name": "LabelRight24",
+		"font": "Nimbus24",
+		"textcolor": "#FFFFFF",
+		"textalign": "right"
+	},
+	{
+		 "name": "LabelDim16",
+		 "font": "Nimbus16",
+		 "textcolor": "#7E848E",
+		 "textalign": "center"
+	},	
+	{
+		 "name": "LabelLeftDimMedium",
+		 "font": "Nimbus16",
+		 "textcolor": "#7E848E",
+		 "textalign": "left"
+	},
+	{
+		 "name": "HeaderChNumber",
+		 "font": "Nimbus24",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "left",
+		 "texttrim": "middle"
+	},
+ 
+	{
+		"name": "HeaderLabel",
+		"font": "Nimbus24",
+		"textcolor": "#000000",
+		"textalign": "center"
+	}, 
+	{
+		"name": "HeaderLabelLeft",
+		"font": "Nimbus12",
+		"textcolor": "#000000",
+		"textalign": "left"
+	}, 
+	{
+		"name": "HeaderLabelLeft16",
+		"font": "Nimbus16",
+		"textcolor": "#FFFFFF",
+		"textalign": "left"
+	}, 
+	{
+		 "name": "HeaderTitle",
+		 "font": "Nimbus24",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "center"
+	}, 
+	{
+		 "name": "HeaderTitleLeft",
+		 "font": "Nimbus24",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "left"
+	}, 
+	{
+		 "name": "HeaderTitleRight",
+		 "font": "Nimbus24",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "right"
+	},
+ 
+	{
+		"name": "ButtonLabel16",
+		"font": "Nimbus16",
+		"textcolor": "#98a0ac",
+		"textcolor.on": "#000000",
+		"textalign": "center"
+	},
+ 
+	{
+		"name": "ButtonLabel12Dim",
+		"font": "Nimbus12",
+		"textcolor": "#505458",
+		"textalign": "center"
+	},
+ 
+    {
+        "name": "ButtonLabel16Dim",
+        "font": "Nimbus16",
+        "textcolor": "#505458",
+        "textalign": "center"
+	},
+ 
+	{
+		"name": "ButtonLabel12",
+		"font": "Nimbus12",
+		"textcolor": "#98a0ac",
+		"textcolor.on": "#000000",
+		"textalign": "center"
+	},
+ 
+    {
+        "name": "ButtonLabel16TB",
+        "font": "Nimbus16",
+        "textcolor": "#98a0ac",
+        "textcolor.on": "#FFFFFF",
+        "textalign": "center"
+	},
+ 
+	{
+		"name": "ButtonLabel24",
+		"font": "Nimbus24",
+		"textcolor": "#98a0ac",
+		"textcolor.on": "#000000",
+		"textalign": "center"
+	},
+ 
+    {
+        "name": "ButtonLabel24FX",
+        "font": "Nimbus24",
+        "textcolor": "#3Ec2Eb",
+        "textcolor.on": "#FFFFFF",
+        "textalign": "center"
+	},
+	{
+		 "name": "BlackButtonLabel12",
+		 "font": "Nimbus12",
+		 "textcolor": "#000000",
+		 "textalign": "center"
+	},
+	{
+		 "name": "BlackButtonLabel16",
+		 "font": "Nimbus16",
+		 "textcolor": "#FFFFFF",
+         "textcolor.on": "#000000",
+		 "textalign": "center"
+	},
+ 
+    {
+        "name": "BlackButtonLabel16GroupEdit",
+        "font": "Nimbus16",
+        "textcolor": "#000000",
+        "textalign": "center"
+	},
+ 
+ 
+	{
+		"name": "ButtonLabelMedium",
+		"font": "Nimbus18",
+		"textcolor": "#FFFFFF",
+		"textalign": "center",
+		"texttrim": "right"
+	},
+
+	{
+		 "name": "ButtonLabelMediumBlack",
+		 "font": "Nimbus18",
+		 "textcolor": "#000000",
+		 "textalign": "center",
+		 "texttrim": "right"
+	},
+
+	{
+		 "name": "ButtonLabelLeftMedium",
+		 "font": "Nimbus18",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "left",
+		 "texttrim": "right"
+	},
+	{
+		"name": "ButtonLabelLarge",
+		"font": "Nimbus24",
+		"textcolor": "#FFFFFF",
+		"textalign": "center",
+		"texttrim": "right"
+	},
+	{
+		"name": "ButtonLabelLargeLeft",
+		"font": "Nimbus24",
+		"textcolor": "#FFFFFF",
+		"textalign": "left"
+	},
+	{
+		"name": "TextButtonLabelLarge",
+		"font": "Nimbus24",
+		"textcolor": "#FFFFFF",
+		"textcolor.on": "#3EC2EB",
+		"textalign": "left"
+	},
+	{
+		"name": "PopupMenu",
+		"font": "Nimbus16",
+		"textcolor": "#FFFFFF",
+		"textcolor.on": "#FFFFFF",
+	    "selectcolor": "#4dafe3",
+		"backcolor": "#303336",
+	    "texttrim": "right",
+		"textalign": "left",
+        "rowheight": 35,
+	    "item_inset": 5,
+		"scroller_size": 5
+	},
+    {
+		 "name": "SelectBoxMedium",
+		 "font": "Nimbus16",
+		 "texttrim": "right",
+		 "forecolor": "#FFFFFF",
+		 "textcolor": "#FFFFFF",
+		 "textcolor.on": "#3EC2EB",
+		 "textalign": "left",
+		 "menustyle": { "style" : "PopupMenu" }
+	},
+
+	{
+		 "name": "SelectBoxMediumCenter",
+		 "font": "Nimbus16",
+		 "texttrim": "right",
+		 "forecolor": "#FFFFFF",
+		 "textcolor": "#FFFFFF",
+		 "textcolor.on": "#3EC2EB",
+		 "textalign": "center",
+		 "menustyle": { "style" : "PopupMenu" }
+	},
+
+    {
+         "name": "SelectBoxLarge",
+         "font": "Nimbus18",
+         "texttrim": "right",
+         "forecolor": "#FFFFFF",
+         "textcolor": "#FFFFFF",
+         "textcolor.on": "#3EC2EB",
+         "textalign": "center",
+         "menustyle": { "style" : "PopupMenu" }
+	},
+ 
+	{
+		 "name": "SelectBoxUC",
+		 "hidetext": 1,
+		 "menustyle": { "style" : "PopupMenu" }
+	},
+	{
+		"name": "UCSelectText",
+		"font": "Nimbus18",
+		"textcolor": "#FFFFFF",
+		"textalign": "center"
+	},
+	{
+		"name": "HeaderFocusLabel",
+		"font": "Nimbus16",
+		"textcolor": "#FFFFFF",
+		"textalign": "right",
+		"texttrim": "right"
+	},
+	{
+		"name": "HeaderFocusValue",
+		"font": "Nimbus24",
+		"textcolor": "#FFFFFF",
+		"textalign": "right",
+		"texttrim": "right"
+	},
+	{
+		"name": "MeterStyle",
+		"hilitecolor": "#699a34",
+		"backcolor": "#1d241a"
+	}, 
+	{
+		"name": "SliderBlueStyle",
+		"hilitecolor": "#00c0f4",
+		"backcolor": "#373c43"
+	},
+	{
+		 "name": "SliderOrangeStyle",
+		 "hilitecolor": "#ffb239",
+		 "backcolor": "#373c43"
+	},
+	{
+		 "name": "ScenesButtonLabel",
+		 "font": "Nimbus16",
+		 "textcolor": "#34373b",
+		 "textcolor.on": "#21d0e5",
+		 "textalign": "center"
+	},
+	{
+		 "name": "PresetTextItem1",
+		 "font": "Nimbus18",
+		 "textcolor": "#98a0ac",
+		 "textalign": "center",
+		 "texttrim": "right"
+	},
+    {
+        "name": "PresetTextItem2",
+        "font": "Nimbus18",
+        "textcolor": "#000000",
+        "textalign": "center",
+        "texttrim": "right"
+    },
+	{
+		 "name": "HugeDigits",
+		 "font": "Nimbus34Digits",
+		 "textcolor": "#FFFFFF",
+		 "textalign": "center"
+	}
+
+]

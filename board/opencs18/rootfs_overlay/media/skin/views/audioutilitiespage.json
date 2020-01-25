@@ -1,0 +1,17 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+	 
+		{ "type": "Label",	"size": "0,10,480,24", "title": "Audio Utilities",  "style": "HeaderTitle"	},
+		{ "type": "Button",	"image": "back_arrow", "name": "/diagnostics"  },
+	 
+		{ "type": "Toggle", "size": "100,75,180,40", "name": "/audio-pass-through", "title": "Pass Thru", "style": "TextButtonLabelLarge", "options": "transparent" },
+		{ "type": "Toggle", "size": "100,125,180,40", "name": "/audio-pass-through-line", "title": "Pass Thru Line", "style": "TextButtonLabelLarge", "options": "transparent" },
+		{ "type": "Toggle", "size": "100,175,180,40", "name": "/avb-loop-test", "title": "AVB Loop", "style": "TextButtonLabelLarge", "options": "transparent" },
+		{ "type": "Toggle", "size": "100,225,180,40", "name": "/avb-loop-fixture-test", "title": "AVB Loop Fixture", "style": "TextButtonLabelLarge", "options": "transparent" }
+	]
+}

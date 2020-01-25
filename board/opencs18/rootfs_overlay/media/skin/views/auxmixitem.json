@@ -1,0 +1,13 @@
+{
+	"children" :
+	[
+	 { "type": "TextBox", "size": "0,4,55,20", "name": "bus_name_$i", "style": "LabelRight16" },
+	 { "type": "Label",  "size": "55,4,10,20",	"title": ":", "style": "LabelLeft16" },
+	 { "type": "VariantView", "name": "bus_mode_$i", "size": "67,0", "children" :
+		[
+		 { "type": "SelectBox", "image": "dropdown_small", "name": "aux_mode_$i", "style": "SelectBoxLarge" },
+		 { "type": "Label",  "size": "0,4,70,20",	"title": "Subgroup", "style": "ButtonLabel16" }
+		]
+	 }
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/auxsub_settings",
+	"children" :
+	[
+		 { "size": "0,200", "children" :
+			[
+			 { "type": "RadioButton", "size": "160,0", "image": "radio_small_left", "name": "auxpremode", "radiovalue": 0, "title": "Pre 1", "style": "ButtonLabel16" },
+			 { "type": "RadioButton", "size": "240,0", "image": "radio_small_center", "name": "auxpremode", "radiovalue": 1, "title": "Pre 2", "style": "ButtonLabel16" },
+			 { "type": "RadioButton", "size": "320,0", "image": "radio_small_right", "name": "auxpremode",	"radiovalue": 2, "title": "Post", "style": "ButtonLabel16" }
+			]
+		 }
+
+	 ]
+}

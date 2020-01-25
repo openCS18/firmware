@@ -1,0 +1,34 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background", "children" :
+			[
+	 
+			 { "type": "Button", "image": "back_arrow", "name": "mainscreen/startPage" },
+			 
+			 { "type": "TextBox", "size": "55,10,25,25", "name": "/mainscreen/header/channel_number", "style": "HeaderChNumber" },
+			 
+			 { "type": "EditBox", "size": "151,8,135,28", "name": "/mainscreen/header/channel_name",	"style": "Label16"	},
+			 { "type": "TextBox", "size": "343,15,50,17", "name": "mainscreen/header/focus_param_name", "style": "HeaderFocusLabel"},
+			 { "type": "TextBox", "size": "403,4,72,34",	"name": "mainscreen/header/focus_param_value",	"style": "HeaderFocusValue"	},
+			 
+			 { "type": "VariantView", "name": "mainscreen/channelinfo/ch_type", "children" :
+				[
+					{ "type": "InputChannelSettings" },
+					{ "type": "StereoInputChannelSettings" },
+					{  },
+					{  },
+					{ "type": "MixChannelSettings" },
+					{ "type": "FxBusChannelSettings" },
+					{ },
+					{ "type": "MainChannelSettings"},
+					{ "type": "MainChannelSettings"}
+				 ]
+			 }
+			]
+		}
+	 ]
+}

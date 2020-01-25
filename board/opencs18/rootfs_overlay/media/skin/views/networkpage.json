@@ -1,0 +1,115 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/ucnet",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "uc_background" },
+
+		{ "type": "Label", "size": "10,0,200,20", "title": "Wired IP:", "style": "LabelLeft14" },
+		{ "type": "TextBox", "size": "10,17,200,20", "name": "wiredIP", "style": "LabelLeft14" },
+	 
+		{ "type": "RadioToggleButton", "size": "200,2,32,32", "image": "header_settings_icon", "name": "setupState", "radiovalue": 1 },
+	 
+		{ "type": "Label", "size": "250,0,200,20", "title": "Wireless IP:", "style": "LabelLeft14" },
+		{ "type": "TextBox", "size": "250,17,200,20", "name": "wirelessIP", "style": "LabelLeft14" },
+
+		{ "type": "RadioToggleButton", "size": "440,2,32,32", "image": "header_settings_icon", "name": "setupState", "radiovalue": 2 },
+	 
+		{ "type": "VariantView", "name": "setupState", "size": "0,42,480,230", "children":
+			[
+				{ "children":
+					[
+						{ "type": "Label",	"size": "25,12,190,25", "title": "Mixer Control", "style": "Label16" },
+						{ "type": "SelectBox", "size": "0,52", "image": "dropdown_xlarge", "name": "selectedMixer", "style": "SelectBoxUC", "menurect":"5,120,470,140" },
+						{ "type": "VariantView", "name": "mixerConnected", "size": "85,165", "children" :
+							[
+								{},
+								{ "type": "ImageView", "image": "uc_mixer_icon" }
+							]
+						},
+						{ "type": "TextBox", "size": "15,52,190,27", "name": "selectedMixerName", "style": "UCSelectText" },
+						{ "type": "TextBox", "size": "15,95,220,20", "name": "selectedMixerInfo1", "style": "LabelLeft16" },
+						{ "type": "TextBox", "size": "15,115,220,20", "name": "selectedMixerInfo2", "style": "LabelLeft16" },
+						{ "type": "TextBox", "size": "15,135,220,20", "name": "selectedMixerInfo3", "style": "LabelLeft16" },
+						{ "type": "Label",	"size": "268,12,190,25",	"title": "Software Control", "style": "Label16" },
+						{ "type": "SelectBox", "size": "241,52", "image": "dropdown_xlarge", "name": "selectedDaw", "style": "SelectBoxUC", "menurect":"5,120,470,140" },
+						{ "type": "VariantView", "name": "selectedDawType", "size": "306,145", "children" :
+							[
+								{},
+								{ "type": "ImageView", "image": "uc_s1_logo" },	
+								{ "type": "ImageView", "image": "uc_capture_logo" }
+							]
+						},
+						{ "type": "TextBox", "size": "258,52,190,27", "name": "selectedDawName", "style": "UCSelectText" },
+						{ "type": "TextBox", "size": "258,95,220,20", "name": "selectedDawInfo1", "style": "LabelLeft16" },
+						{ "type": "TextBox", "size": "258,115,220,20", "name": "selectedDawInfo2", "style": "LabelLeft16" },
+						{ "type": "TextBox", "size": "258,135,220,20", "name": "selectedDawInfo3", "style": "LabelLeft16" }
+					]
+				},
+			 
+				{ "children":
+					[
+						{ "type": "ImageView", "size": "0,0,480,232", "options": "colorize", "style": {"backcolor": "#000000"} },
+					 
+						{ "type": "RadioButton", "size": "0,33,160,28", "title": "Dynamic", "image": "uc_radio_button", "name": "wiredMode", "radiovalue": 0, "style": "ButtonLabel16"	},
+						{ "type": "RadioButton", "size": "160,33,160,28", "title": "Static Self-Assigned", "image": "uc_radio_button", "name": "wiredMode", "radiovalue": 1, "style": "ButtonLabel16"	},
+						{ "type": "RadioButton", "size": "320,33,160,28", "title": "Static Manual", "image": "uc_radio_button", "name": "wiredMode", "radiovalue": 2, "style": "ButtonLabel16"	},
+						
+						{ "type": "VariantView", "name": "wiredMode", "size": "0,55,480,220", "children":
+							[
+								{ "type": "Button", "size": "173,118", "image": "button_large", "name": "wiredRenew", "title": "Renew Lease", "style": "ButtonLabel16"	},
+										
+								{ "type": "Button", "size": "173,118", "image": "button_large", "name": "wiredEditApply", "title": "Apply", "style": "ButtonLabel16"	},
+								
+								{ "children":
+									[
+										{ "type": "Label", "size": "0,22,130,20", "title": "IP:", "style": "LabelRight14" },
+									 
+									 	{ "type": "ImageView", "size": "134,18,212,28", "image": "uc_textedit_bg", "children":
+											[
+												{ "type": "EditBox", "size": "2,2,208,24", "name": "wiredEditIP",	"style": "Label16", "keyboardlayout": "numbers" }
+											]
+										},
+										
+										{ "type": "Label", "size": "0,54,130,20", "title": "Subnet Mask:", "style": "LabelRight14" },
+									 
+										{ "type": "ImageView", "size": "134,50,212,28", "image": "uc_textedit_bg", "children":
+											[
+												{ "type": "EditBox", "size": "2,2,208,24", "name": "wiredEditSubnet",	"style": "Label16", "keyboardlayout": "numbers" }
+											]
+										},
+										
+										{ "type": "Label", "size": "0,86,130,20", "title": "Gateway:", "style": "LabelRight14" },
+									 
+										{ "type": "ImageView", "size": "134,82,212,28", "image": "uc_textedit_bg", "children":
+											[
+												{ "type": "EditBox", "size": "2,2,208,24", "name": "wiredEditGateway",	"style": "Label16", "keyboardlayout": "numbers" }
+											]
+										},
+									 
+										{ "type": "Button", "size": "173,118", "image": "button_large", "name": "wiredEditApply", "title": "Apply", "style": "ButtonLabel16"	}
+									]
+								}
+							]
+						}
+					]
+				},
+				
+				{ "children":
+					 [
+						{ "type": "ImageView", "size": "0,0,480,232", "options": "colorize", "style": {"backcolor": "#000000"} },
+					  
+					 	{ "type": "Button",  "size": "50,33", "image": "preset_list_item", "name": "/mainscreen/wifiPage" },
+					  
+						{ "type": "Label", "title": "Network:", "size": "0,33,238,28", "style": "LabelRight16" },
+						{ "type": "TextBox", "name": "/mainscreen/wifi/activenetwork", "size": "242,33,238,28", "style": "LabelLeft16" },
+					  
+						{ "type": "Button", "size": "173,173", "image": "button_large", "name": "wifiRenew", "title": "Renew Lease", "style": "ButtonLabel16"	}
+					 ]
+				}
+			]
+		}
+	 ]
+}

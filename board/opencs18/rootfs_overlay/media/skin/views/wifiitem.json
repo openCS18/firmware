@@ -1,0 +1,12 @@
+{
+	"children" :
+	[
+		{ "type": "Toggle",  "size": "0,0", "image": "preset_list_item", "name": "selected_$i" },
+        { "type": "VariantView", "name": "selected_$i", "size": "0,0,387,28", "children" :
+          [
+			  { "type": "TextBox", "name": "name_$i", "size": "0,0,387,28", "style": "PresetTextItem1" },
+			  { "type": "TextBox", "name": "name_$i", "size": "0,0,387,28", "style": "PresetTextItem2" }
+          ]
+        }
+	]
+}

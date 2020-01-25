@@ -1,0 +1,30 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background"},
+		{ "type": "PageHeader" },
+		{ "type": "Button",	"image": "back_arrow",	"name": "/mainscreen/utilsPage" },
+	 
+		{ "type": "Label",  "size": "160,60,125,25",  "title": "Diagnostics",  "style": "LabelLarge" },
+	 
+		{ "type": "Button", "size": "20,100,180,40", "name": "cal-touch",	"title": "Cal Touchscreen", "style": "TextButtonLabelLarge", "options": "transparent" },
+		{ "type": "Toggle", "size": "20,140,180,40", "name": "test-48v",	"title": "48 Volt", "style": "TextButtonLabelLarge", "options": "transparent" },
+		{ "type": "Button", "size": "20,180,200,40", "title": "Audio Utilities", "name": "audio-utilities", "style": "TextButtonLabelLarge", "options": "transparent" },
+		{ "type": "Button", "size": "20,220,180,40", "title": "Fader Utilities", "style": "TextButtonLabelLarge", "name": "fader-utilities", "options": "transparent" },
+	 
+		{ "type": "Toggle", "size": "220,100,220,40", "name": "test-surface",	"title": "Ctrl Surface Test Mode", "style": "TextButtonLabelLarge", "options": "transparent" },
+		{ "type": "Toggle", "size": "220,140,200,40", "name": "test-scribble-image",	"title": "Scribble Stip Image", "style": "TextButtonLabelLarge", "options": "transparent"},
+		{ "type": "Toggle", "size": "220,180,200,40", "name": "test-rgb-colors",	"title": "RGB Colors", "style": "TextButtonLabelLarge", "options": "transparent" },
+	 
+	 
+		{ "type": "VariantView", "name": "footswitch-active", "children" :
+			[
+				{ "type": "Label", "size": "220,220,200,40", "title": "Footswitch OFF",	"style": "LabelLeft24" },
+				{ "type": "Label", "size": "220,220,200,40", "title": "Footswitch ON",	"style": "LabelLeft24" }
+			]
+	    }
+	 ]
+}

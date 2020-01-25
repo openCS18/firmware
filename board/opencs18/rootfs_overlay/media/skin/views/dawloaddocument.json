@@ -1,0 +1,25 @@
+{
+	"width": 480, 
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/DawLoadDocument", 
+	"children":
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+		{ "type": "TextBox",  "size": "0,10,480,24", "name": "prompt", "style": "HeaderTitle" },
+		{ "type": "Button",	"image": "back_arrow", "name": "cancel" },
+		{ "type": "Button",	"size":"390,7", "image": "button_small", "title": "OK", "name": "ok", "style": "ButtonLabel16" },
+		{ "type": "ListView", "name": "documents", "size": "5,50,470,222", "options": "wheelselection",
+		  "style": 
+			{
+				"font": "Nimbus18",
+				"backcolor": "#000000", 
+				"textcolor": "#B2C4DC", 
+				"selectcolor":"#235168", 
+				"hilitecolor":"#303336", 
+				"rowheight":37 , 
+				"scroller_size":8 
+			}
+		}
+	]
+}

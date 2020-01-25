@@ -1,0 +1,97 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/groups",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background","children" :
+			[
+			 { "type": "PageHeader" },
+	  
+			 { "type": "Label", "size": "10,55,100,30", "title": "Groups:", "style": "LabelLeft24" },
+	  
+			 { "type": "Toggle",	"image": "button_medium", "size": "180,58", "title": "Auto Groups", "name": "show_auto", "style": "ButtonLabel16" },
+			 
+			 { "type": "VariantView", "name": "has-selection", "size": "318,58", "children" :
+				[
+					{},
+					{ "type": "Button",	"image": "button_small", "title": "Edit", "name": "edit", "style": "ButtonLabel16" }
+				 ]
+			 },
+			 
+			 { "type": "Button",	"size": "435,100", "image": "group_add", "name": "add"	},
+			 
+			 { "type": "Button",	"size": "430,160", "image": "arrow_up", "name": "one-up"	},
+			 { "type": "Button",	"size": "430,220", "image": "arrow_down", "name": "one-down"	},
+             
+             { "type": "Toggle", "size": "2,100", "name": "selected_1", "image": "group_btn_large" },
+             { "type": "VariantView", "name": "selected_1", "size": "2,100,193,40", "children" :
+             [
+              { "type": "TextBox", "name": "name_1", "size": "0,0,193,40", "style": "PresetTextItem1" },
+              { "type": "TextBox", "name": "name_1", "size": "0,0,193,40", "style": "PresetTextItem2" }
+              ]
+             },
+             
+             
+			 { "type": "Toggle", "size": "200,100", "name": "selected_2", "image": "group_btn_large" },
+             { "type": "VariantView", "name": "selected_2", "size": "200,100,193,40", "children" :
+             [
+              { "type": "TextBox", "name": "name_2", "size": "0,0,193,40", "style": "PresetTextItem1" },
+              { "type": "TextBox", "name": "name_2", "size": "0,0,193,40", "style": "PresetTextItem2" }
+              ]
+             },
+	  
+			 { "type": "Toggle", "size": "2,141", "name": "selected_3", "image": "group_btn_large" },
+             { "type": "VariantView", "name": "selected_3", "size": "2,141,193,40", "children" :
+             [
+              { "type": "TextBox", "name": "name_3", "size": "0,0,193,40", "style": "PresetTextItem1" },
+              { "type": "TextBox", "name": "name_3", "size": "0,0,193,40", "style": "PresetTextItem2" }
+              ]
+             },
+			 
+			 { "type": "Toggle", "size": "200,141", "name": "selected_4", "image": "group_btn_large" },
+             { "type": "VariantView", "name": "selected_4", "size": "200,141,193,40", "children" :
+             [
+              { "type": "TextBox", "name": "name_4", "size": "0,0,193,40", "style": "PresetTextItem1" },
+              { "type": "TextBox", "name": "name_4", "size": "0,0,193,40", "style": "PresetTextItem2" }
+              ]
+             },
+             
+			 { "type": "Toggle", "size": "2,182", "name": "selected_5", "image": "group_btn_large" },
+             { "type": "VariantView", "name": "selected_5", "size": "2,182,193,40", "children" :
+             [
+              { "type": "TextBox", "name": "name_5", "size": "0,0,193,40", "style": "PresetTextItem1" },
+              { "type": "TextBox", "name": "name_5", "size": "0,0,193,40", "style": "PresetTextItem2" }
+              ]
+             },
+             
+
+			 { "type": "Toggle", "size": "200,182", "name": "selected_6", "image": "group_btn_large" },
+             { "type": "VariantView", "name": "selected_6", "size": "200,182,193,40", "children" :
+             [
+              { "type": "TextBox", "name": "name_6", "size": "0,0,193,40", "style": "PresetTextItem1" },
+              { "type": "TextBox", "name": "name_6", "size": "0,0,193,40", "style": "PresetTextItem2" }
+              ]
+             },
+	  
+			 { "type": "Toggle", "size": "2,223", "name": "selected_7", "image": "group_btn_large" },
+             { "type": "VariantView", "name": "selected_7", "size": "2,223,193,40", "children" :
+             [
+              { "type": "TextBox", "name": "name_7", "size": "0,0,193,40", "style": "PresetTextItem1" },
+              { "type": "TextBox", "name": "name_7", "size": "0,0,193,40", "style": "PresetTextItem2" }
+              ]
+             },
+			 
+			 { "type": "Toggle", "size": "200,223", "name": "selected_8", "image": "group_btn_large" },
+             { "type": "VariantView", "name": "selected_8", "size": "200,223,193,40", "children" :
+             [
+              { "type": "TextBox", "name": "name_8", "size": "0,0,193,40", "style": "PresetTextItem1" },
+              { "type": "TextBox", "name": "name_8", "size": "0,0,193,40", "style": "PresetTextItem2" }
+              ]
+             }
+
+			]
+		}
+	]
+}

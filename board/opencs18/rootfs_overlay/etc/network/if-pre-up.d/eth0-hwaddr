@@ -1,0 +1,10 @@
+#!/bin/sh
+
+HWAFILE=/etc/network/hwaddr.txt
+
+if [ "$IFACE" = "eth0" ]; then
+    if [ -f $HWAFILE ]; then
+	HWADDR=`cat $HWAFILE`
+	ifconfig $IFACE hw ether $HWADDR
+    fi
+fi

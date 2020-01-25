@@ -1,0 +1,2 @@
+#!/bin/sh
+psplash-write "PROGRESS 5"

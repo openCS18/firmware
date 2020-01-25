@@ -1,0 +1,52 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/groupsedit",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background","children" :
+			[
+			 { "type": "PageHeader" },
+	  
+			 { "type": "Label", "size": "10,55,100,30", "title": "Name:", "style": "LabelLeft16" },
+			 
+			 { "type": "Button",	"size": "280,55", "image": "group_exit", "title": "Done", "name": "/mainscreen/groupsPage", "style": "ButtonLabel16" },
+			 
+			 { "type": "TextBox",	"size": "112,55,119,28", "name": "group_name", "style": "ButtonLabel16" },
+			 { "type": "Button",	"size": "112,55,119,28", "name": "name-prompt" },
+			 
+			 { "type": "Button",	"size": "420,160", "image": "arrow_up", "name": "one-up"	},
+			 { "type": "Button",	"size": "420,220", "image": "arrow_down", "name": "one-down"	},
+			 
+			 { "type": "VariantView", "name": "/mainscreen/groups/can-delete", "size": "396,90", "children" :
+				[
+					{},
+					{ "type": "Button",	"image": "group_delete", "title": "Delete", "name": "delete", "style": "ButtonLabel16" }
+				 ]
+			 },
+			 
+			 { "type": "GroupAssignItem", "size": "2,89",  "def": { "$i": "01"} },
+			 { "type": "GroupAssignItem", "size": "95,89",  "def": { "$i": "02"} },
+			 { "type": "GroupAssignItem", "size": "188,89",  "def": { "$i": "03"} },
+			 { "type": "GroupAssignItem", "size": "281,89",  "def": { "$i": "04"} },
+			 
+			 { "type": "GroupAssignItem", "size": "2,135",  "def": { "$i": "05"} },
+			 { "type": "GroupAssignItem", "size": "95,135",  "def": { "$i": "06"} },
+			 { "type": "GroupAssignItem", "size": "188,135",  "def": { "$i": "07"} },
+			 { "type": "GroupAssignItem", "size": "281,135",  "def": { "$i": "08"} },
+			 
+			 { "type": "GroupAssignItem", "size": "2,181",  "def": { "$i": "09"} },
+			 { "type": "GroupAssignItem", "size": "95,181",  "def": { "$i": "10"} },
+			 { "type": "GroupAssignItem", "size": "188,181",  "def": { "$i": "11"} },
+			 { "type": "GroupAssignItem", "size": "281,181",  "def": { "$i": "12"} },
+			 
+			 { "type": "GroupAssignItem", "size": "2,227",  "def": { "$i": "13"} },
+			 { "type": "GroupAssignItem", "size": "95,227",  "def": { "$i": "14"} },
+			 { "type": "GroupAssignItem", "size": "188,227",  "def": { "$i": "15"} },
+			 { "type": "GroupAssignItem", "size": "281,227",  "def": { "$i": "16"} }
+
+			]
+		}
+	]
+}

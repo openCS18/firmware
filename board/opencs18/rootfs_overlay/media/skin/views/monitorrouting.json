@@ -1,0 +1,46 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/monitor",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background",
+		  "children" :
+		  [
+			{
+				"type": "Label",
+				"size": "140,12,200,24",
+				"title": "Monitor Cue Routing",
+				"style": "HeaderTitle"
+			},
+		   
+			{ "type": "Toggle", "size": "120,48", "name": "routemono",	"image": "grid_button",  "title": "Mono", "style": "ButtonLabel16"},
+			{ "type": "Toggle", "size": "240,48", "name": "routedig", "image": "grid_button", "title": "Digital", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "360,48", "name": "routetape", "image": "grid_button", "title": "Tape", "style": "ButtonLabel16" },
+
+			{ "type": "Toggle", "size": "0,92", "name": "routemix1", "image": "grid_button", "title": "Mix 1", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "120,92", "name": "routemix2", "image": "grid_button", "title": "Mix 2", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "240,92", "name": "routemix3", "image": "grid_button", "title": "Mix 3", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "360,92", "name": "routemix4", "image": "grid_button", "title": "Mix 4", "style": "ButtonLabel16" },
+
+			{ "type": "Toggle", "size": "0,136", "name": "routemix5", "image": "grid_button", "title": "Mix 5", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "120,136", "name": "routemix6", "image": "grid_button", "title": "Mix 6", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "240,136", "name": "routemix7", "image": "grid_button", "title": "Mix 7", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "360,136", "name": "routemix8", "image": "grid_button", "title": "Mix 8", "style": "ButtonLabel16" },
+
+			{ "type": "Toggle", "size": "0,180", "name": "routemix9", "image": "grid_button", "title": "Mix 9", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "120,180", "name": "routemix10", "image": "grid_button", "title": "Mix 10", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "240,180", "name": "routemix11", "image": "grid_button", "title": "Mix 11", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "360,180", "name": "routemix12", "image": "grid_button", "title": "Mix 12", "style": "ButtonLabel16" },
+
+			{ "type": "Toggle", "size": "0,224", "name": "routemix13", "image": "grid_button", "title": "Mix 13", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "120,224", "name": "routemix14", "image": "grid_button", "title": "Mix 14", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "240,224", "name": "routemix15", "image": "grid_button", "title": "Mix 15", "style": "ButtonLabel16" },
+			{ "type": "Toggle", "size": "360,224", "name": "routemix16", "image": "grid_button", "title": "Mix 16", "style": "ButtonLabel16" }
+
+
+		   ]
+		}
+	]
+}

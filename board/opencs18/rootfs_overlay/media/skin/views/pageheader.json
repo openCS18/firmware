@@ -1,0 +1,27 @@
+{
+	"width": 480,
+	"height": 45,
+	"style": "PageBack",
+	"controller": "/mainscreen/header",
+	"children" :
+	[
+		{ "type": "TextBox", "size": "5,10,25,25", "name": "channel_number", "style": "HeaderChNumber" },
+		{ "type": "TextBox", "size": "35,10,110,25", "name": "channel_name", "style": "HeaderChNumber" },
+		
+		{ "type": "TextBox", "size": "150,12,135,20", "name": "channel_info",	"style": "Label16" },
+		{ "type": "VariantView", "name": "/mapping/dawMode", "size": "300,6", "children" : 
+			[
+			 
+			 { "type": "VariantView", "name": "/mainscreen/ucnet/mixerConnected", "children" :
+				[
+					{},
+					{ "type": "Button", "size": "0, 0,32,32", "image": "header_settings_icon",	"name": "/mainscreen/chSettingsPage" }
+				]
+			 },
+			 {}
+			]
+		},
+		{ "type": "TextBox", "size": "343,15,50,17", "name": "focus_param_name", "style": "HeaderFocusLabel" },
+		{ "type": "TextBox", "size": "403,4,72,34", "name": "focus_param_value", "style": "HeaderFocusValue" }
+	]
+}

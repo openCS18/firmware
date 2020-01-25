@@ -1,0 +1,28 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background" },
+		{ "type": "PageHeader" },
+	 
+		{ "type": "Label",  "size": "10,55,100,30", "title": "Channel - ", "style": "LabelLeft24" },
+		{ "type": "TextBox", "size": "105,55,50,30", "name": "mainscreen/header/channel_number", "style": "LabelLeft24" },
+		{
+			"size": "0,0,480,272", "controller":"mainscreen/channel_presets", "children" :
+			[
+				{ "type": "PresetItem", "size": "10,90",  "def": { "$i": "1"} },
+				{ "type": "PresetItem", "size": "10,125", "def": { "$i": "2"} },
+				{ "type": "PresetItem", "size": "10,160", "def": { "$i": "3"} },
+				{ "type": "PresetItem", "size": "10,195", "def": { "$i": "4"} },
+				{ "type": "PresetItem", "size": "10,230", "def": { "$i": "5"} },
+			 
+				{ "type": "Button",	"size": "422,49", "image": "arrow_page_up", "name": "page-up" },
+				{ "type": "Button",	"size": "422,100", "image": "arrow_up", "name": "one-up"	},
+				{ "type": "Button",	"size": "422,172", "image": "arrow_down", "name": "one-down"	},
+				{ "type": "Button", "size": "422,223", "image": "arrow_page_down",	"name": "page-down" }															
+			]
+		 }
+	 ]
+}

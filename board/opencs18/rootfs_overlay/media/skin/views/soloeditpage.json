@@ -1,0 +1,40 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/solo",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background", "children" :
+			[
+			 { "type": "PageHeader" },
+		
+			 { "type": "Label", "size": "0,60,480,24", "title": "Solo Edit Page:", "style": "Label24" },
+			 
+			 { "type": "Label", "size": "130,110,100,24", "title": "Solo In Place:", "style": "LabelLeft16" },
+			 { "type": "Toggle", "size": "280,110", "image": "button_small", "name": "sip" },
+			 { "type": "VariantView", "name": "sip", "size": "280,110,80,28", "children" :
+				[
+				 { "type": "Label", "size": "0,0,80,28", "title": "Off", "style": "ButtonLabel16" },
+				 { "type": "Label", "size": "0,0,80,28", "title": "On", "style": "BlackButtonLabel16GroupEdit" }
+				]
+			 },
+			 
+			 { "type": "Label", "size": "130,150,100,24", "title": "Solo PFL:", "style": "LabelLeft16" },
+			 
+			 { "type": "Toggle", "size": "280,150", "image": "button_small", "name": "pfl", "style": "ButtonLabel16" },
+			 { "type": "VariantView", "name": "pfl", "size": "280,150,80,28", "children" :
+				[
+				 { "type": "Label", "size": "0,0,80,28", "title": "Off", "style": "ButtonLabel16" },
+				 { "type": "Label", "size": "0,0,80,28", "title": "On", "style": "BlackButtonLabel16GroupEdit" }
+				]
+			 },
+			 
+			 { "type": "Label", "size": "120,200,240,24", "title": "Solo Mode:", "style": "Label16" },
+			 { "type": "RadioButton", "size": "120,230", "image": "radio_small_left", "name": "solomode", "radiovalue": 0, "title": "Latch", "style": "ButtonLabel16" },
+			 { "type": "RadioButton", "size": "200,230", "image": "radio_small_center", "name": "solomode", "radiovalue": 1, "title": "Radio", "style": "ButtonLabel16" },
+			 { "type": "RadioButton", "size": "280,230", "image": "radio_small_right", "name": "solomode", "radiovalue": 2, "title": "CR", "style": "ButtonLabel16" }
+			]
+		}
+	 ]
+}

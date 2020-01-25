@@ -1,0 +1,32 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/fxmix",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+
+		{ "type": "Label", "size": "0,10,480,24", "title": "FX Mix Setup", "style": "HeaderTitle" },
+		{ "type": "Button", "image": "back_arrow","name": "/mainscreen/systemPage" },
+
+		{ "type": "Label", "size": "50,79,55,20", "title": "FX A:", "style": "LabelRight16" },
+		{ "type": "RadioButton", "size": "127,75", "image": "radio_small_left",	"name": "fx_mode_01", "radiovalue": 0, "title": "Pre1", "style": "ButtonLabel16" },
+        { "type": "RadioButton", "size": "207,75", "image": "radio_small_center",	"name": "fx_mode_01", "radiovalue": 1, "title": "Pre2", "style": "ButtonLabel16" },
+        { "type": "RadioButton", "size": "287,75", "image": "radio_small_right",	"name": "fx_mode_01", "radiovalue": 2, "title": "Post", "style": "ButtonLabel16" },
+
+		{ "type": "Label", "size": "50,124,55,20",	"title": "FX B:", "style": "LabelRight16" },
+        { "type": "RadioButton", "size": "127,120", "image": "radio_small_left",	"name": "fx_mode_02", "radiovalue": 0, "title": "Pre1", "style": "ButtonLabel16" },
+        { "type": "RadioButton", "size": "207,120", "image": "radio_small_center",	"name": "fx_mode_02", "radiovalue": 1, "title": "Pre2", "style": "ButtonLabel16" },
+        { "type": "RadioButton", "size": "287,120", "image": "radio_small_right",	"name": "fx_mode_02", "radiovalue": 2, "title": "Post", "style": "ButtonLabel16" },
+
+		{ "type": "Label", "size": "50,169,55,20", "title": "FX C:", "style": "LabelRight16" },
+        { "type": "RadioButton", "size": "127,165", "image": "radio_small_left",	"name": "fx_mode_03", "radiovalue": 0, "title": "Pre1", "style": "ButtonLabel16" },
+        { "type": "RadioButton", "size": "207,165", "image": "radio_small_center",	"name": "fx_mode_03", "radiovalue": 1, "title": "Pre2", "style": "ButtonLabel16" },
+        { "type": "RadioButton", "size": "287,165", "image": "radio_small_right",	"name": "fx_mode_03", "radiovalue": 2, "title": "Post", "style": "ButtonLabel16" },
+
+		{ "type": "Label", "size": "50,214,55,20", "title": "FX D:", "style": "LabelRight16" },
+        { "type": "RadioButton", "size": "127,210", "image": "radio_small_left",	"name": "fx_mode_04", "radiovalue": 0, "title": "Pre1", "style": "ButtonLabel16" },
+        { "type": "RadioButton", "size": "207,210", "image": "radio_small_center",	"name": "fx_mode_04", "radiovalue": 1, "title": "Pre2", "style": "ButtonLabel16" },
+        { "type": "RadioButton", "size": "287,210", "image": "radio_small_right",	"name": "fx_mode_04", "radiovalue": 2, "title": "Post", "style": "ButtonLabel16" }	 ]
+}

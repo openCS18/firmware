@@ -1,0 +1,85 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[		
+		{ "type": "ImageView", "image": "system_background" },
+
+		{ "size": "15,3",	"children":
+			[
+				{ "type": "Label",	"size": "0,0,140,34",	"title": "Pan Mode:", "style": "LabelLeft16" },
+				{ "type": "SelectBox", "size": "130,0", "image": "dropdown_medium",	"name": "mainscreen/system/pan_mode", "style": "SelectBoxMediumCenter" }
+			]
+		},
+		 
+		{ "size": "15,37",	"children":
+			[
+			 { "type": "Label", 	"size": "0,0,140,34",	"title": "Show Peak Hold:",	"style": "LabelLeft16" },
+			 { "type": "SelectBox",	"size": "130,0", "image": "dropdown_medium", "name": "showPeakHold", "style": "SelectBoxMediumCenter" }
+			]
+		},
+
+		{ "size": "15,71",	"children":
+			[
+				{ "type": "Label", "size": "0,0,140,34", "title": "Global Aux Mute:", "style": "LabelLeft16" },
+				{ "type": "SelectBox", "size": "130,0", "image": "dropdown_medium", "name": "mainscreen/system/aux_mute", "style": "SelectBoxMediumCenter"  }
+			]
+		},
+	 
+		{ "size": "15,105",	"children":
+			[
+				{ "type": "Label", 	"size": "0,0,140,34", "title": "Sample Rate:", "style": "LabelLeft16" },
+				{ "type": "SelectBox", "size": "130,0", "image": "dropdown_medium", "name": "mainscreen/system/sample_rate", "style": "SelectBoxMediumCenter" }
+			]
+		},
+	 
+		{ "size": "15,139",	"children":
+			[
+				{ "type": "Label", 	"size": "0,0,140,34", "title": "LCD Brightness:", "style": "LabelLeft16" },
+				{ "type": "VariantView", "name": "lcd-brightness", "size": "130,0", "children" :
+					[
+						{ "type": "Toggle", "title": "Full", "style": "ButtonLabelMedium", "image": "button_medium", "name": "lcd-brightness" },
+						{ "type": "Toggle", "title": "Dim", "style": "ButtonLabelMediumBlack", "image": "button_medium", "name": "lcd-brightness" }
+					]
+				}
+			]
+		},
+	 
+		{ "size": "15,173",	"children":
+			[
+				{ "type": "Label", 	"size": "0,0,140,34", "title": "Footswitch Mode:", "style": "LabelLeft16" },
+				{ "type": "SelectBox", "size": "130,0", "image": "dropdown_medium", "name": "system/fsw_mode", "style": "SelectBoxMediumCenter", "menurect": "146,10,156,190"}
+			]
+		},
+	 
+		{ "size": "15,207",	"children":
+			[
+				{ "type": "Label", 	"size": "0,0,140,34", "title": "Footswitch Polarity:", "style": "LabelLeft16" },
+				{ "type": "SelectBox", "size": "130,0", "image": "dropdown_medium", "name": "system/fsw_polarity", "style": "SelectBoxMediumCenter" }
+			]
+		},
+	 
+		{ "size": "15,241",	"children":
+			[
+				{ "type": "Label", 	"size": "0,0,140,34",	"title": "Sync Ch Select:",	"style": "LabelLeft16" },
+				{ "type": "SelectBox",	"size": "130,0", "image": "dropdown_medium", "name": "syncChannelSelect", "style": "SelectBoxMediumCenter" }
+			]
+		},
+	 
+		{ "type": "Button",  "size": "300,10,60,60",  "image": "system_permissions", "name": "mainscreen/permissionsPage"  },
+		{ "type": "Label",   "size": "285,65,90,20",  "title": "Permissions",  "style": "Label16"  },
+			  
+		{ "type": "Button",  "size": "300,100,60,60",  "image": "system_aux_mix", "name": "mainscreen/auxmixsetupPage" },
+		{ "type": "Label",  "size": "285,155,90,20",  "title": "Aux Routing", "style": "Label16" },
+			  
+		{ "type": "Button",  "size": "300,195,60,60", "image": "system_audio_routing", "name": "mainscreen/audioroutingPage"  },
+		{ "type": "Label",   "size": "285,250,90,20", "title": "Digital Routing", "style": "Label16" },
+	 
+		{ "type": "Button",	"size": "400,10,60,60", "image": "system_fx_routing",	"name": "mainscreen/fxmixsetupPage"	 },
+		{ "type": "Label", "size": "385,65,90,20", "title": "FX Routing", "style": "Label16" },
+			 
+		{ "type": "Button", "size": "400,100,60,60", "image": "system_firmware", "name": "mainscreen/firmwarePage" },
+		{ "type": "Label",	"size": "385,155,90,20", "title": "Firmware","style": "Label16"	 }
+	 ]
+}

@@ -1,0 +1,96 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller":"mainscreen", 
+	"children" :
+	[		
+		{ "type": "ImageView", "image": "start_background" },
+		{ "type": "PageHeader" },
+			  			
+		{ "type": "VariantView", "name": "ucnet/captureConnected",  "children" : 
+			[
+				{ "type": "VariantView", "name": "/mapping/dawMode",  "children" : 
+					[
+						{ "size": "50,0", "children" :
+						    [
+								{ "type": "Button", "size": "0,116,68,88", "image": "start_system_icon", "name": "systemPage" },			  
+								{ "type": "Label",  "size": "0,184,68,20", "title": "System", "style": "Label16" },
+			  
+								{ "type": "Button", "size": "100,116,68,88", "image": "start_utilities_icon", "name": "utilsPage"  },			  
+								{ "type": "Label",  "size": "100,184,68,20", "title": "Utilities", "style": "Label16" },
+
+		 						{ "type": "Button", "size": "200,116,68,88", "image": "start_preamps_icon", "name": "preampsPage" },
+								{ "type": "Label",  "size": "200,184,68,20", "title": "Preamps", "style": "Label16"  },
+ 			  			  			  
+								{ "type": "Button", "size": "300,116,68,88", "image": "start_fx_icon", "name": "fxHomePage" },
+								{ "type": "Label",  "size": "300,184,68,20", "title": "FX Edit", "style": "Label16" }
+							]
+						},
+
+						{ "type": "VariantView", "name": "/mapping/midiMode",  "children" : 
+							[
+								{ "size": "80,0", "children" :
+									[
+										{ "type": "Button", "size": "0,116,68,88", "image": "start_system_icon", "name": "systemPage" },			  
+										{ "type": "Label",  "size": "0,184,68,20", "title": "System", "style": "Label16" },
+			  
+										{ "type": "Button", "size": "120,116,68,88", "image": "start_utilities_icon", "name": "utilsPage"  },			  
+										{ "type": "Label",  "size": "120,184,68,20", "title": "Utilities", "style": "Label16" },
+
+										{ "type": "Button", "size": "240,116,68,88", "image": "start_fx_icon", "name": "dawFxPage" },			  
+										{ "type": "Label",  "size": "220,184,108,20", "title": "Inserts / Sends", "style": "Label16" }
+									]
+								},
+  					    
+								{ "size": "80,0", "children" :
+									[
+										{ "type": "Button", "size": "80,86,68,88", "image": "start_system_icon", "name": "systemPage" },			  
+										{ "type": "Label",  "size": "80,154,68,20", "title": "System", "style": "Label16" },
+			  
+										{ "type": "Button", "size": "180,86,68,88", "image": "start_utilities_icon", "name": "utilsPage"  },			  
+										{ "type": "Label",  "size": "180,154,68,20", "title": "Utilities", "style": "Label16" },
+
+										{ "type": "TextBox",  "size": "20,210,80,30", "style": "Label24", "name": "/midimixer/assignment" },
+										{ "type": "Label",  "size": "20,230,80,30", "title": "Assignment", "style": "Label16" },
+										{ "type": "TextBox",  "size": "130,210,200,30", "style": "Label24", "name": "/midimixer/timecode" },
+										{ "type": "VariantView", "name": "/midimixer/time_smpte",  "children" : 
+											[
+												{ "type": "VariantView", "name": "/midimixer/time_beats",  "children" : 
+													[
+														{ "type": "Label",  "size": "130,230,200,30", "title": "Seconds", "style": "Label16" },
+														{ "type": "Label",  "size": "130,230,200,30", "title": "Beats", "style": "Label16" }
+													]
+												},
+												{ "type": "Label",  "size": "130,230,200,30", "title": "SMPTE", "style": "Label16" }
+											]
+										}
+									]
+								}
+							]
+				    	}  
+					]
+				},
+
+				{ "size": "25,0", "children" :
+					[
+						{ "type": "Button", "size": "0,116,68,88", "image": "start_system_icon", "name": "systemPage" },			  
+						{ "type": "Label",  "size": "0,184,68,20", "title": "System", "style": "Label16" },
+			  
+						{ "type": "Button", "size": "90,116,68,88", "image": "start_utilities_icon", "name": "utilsPage"  },			  
+						{ "type": "Label",  "size": "90,184,68,20", "title": "Utilities", "style": "Label16" },
+
+		 				{ "type": "Button", "size": "180,116,68,88", "image": "start_preamps_icon", "name": "preampsPage" },
+						{ "type": "Label",  "size": "180,184,68,20", "title": "Preamps", "style": "Label16"  },
+ 			  			  			  
+						{ "type": "Button", "size": "270,116,68,88", "image": "start_fx_icon", "name": "fxHomePage" },
+						{ "type": "Label",  "size": "270,184,68,20", "title": "FX Edit", "style": "Label16" },
+
+						{ "type": "Button", "size": "360,116,68,88", "image": "start_capture_icon", "name": "capturePage" },			  
+						{ "type": "Label",  "size": "360,184,68,20", "title": "Capture", "style": "Label16" }					
+					]
+				}				
+			]	
+		}						  
+	 ]
+}

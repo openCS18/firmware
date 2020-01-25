@@ -1,0 +1,66 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/eq",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "eq_background", "children" :
+			[
+				{ "type": "PageHeader"  },
+			 
+				{ "type": "VariantView", "name": "ch_type", "children" :
+					[
+						{ },
+						{ },
+						{ },
+						{ },
+						{ },
+						{ },
+						{ },
+						{ },
+						{ "children" :
+							[
+							  { "type": "Label", 	"size": "15,55,44,20",	"title": "LPF",	"style": "Label16" },
+							  { "type": "LPFControl", "name": "lpf", "size": "0,60,74,36",	"style": "SliderBlueStyle" },
+							  { "type": "TextBox", "size": "5,83,64,20", "name": "lpf", "style": "Label16" }
+							]
+						}
+					]
+				},
+			 
+				{ "type": "RadioButton", "size": "15,110", "image": "eq_button", "name": "encoder_mode", "radiovalue": 0, "title": "Gain", "style": "BlackButtonLabel16"	},
+				{ "type": "RadioButton", "size": "15,164", "image": "eq_button", "name": "encoder_mode", "radiovalue": 1, "title": "Freq", "style": "BlackButtonLabel16"	},
+			  	{ "type": "RadioButton", "size": "15,220", "image": "eq_button", "name": "encoder_mode", "radiovalue": 2, "title": "Q",  "style": "BlackButtonLabel16" },
+			  
+				{ "type": "Toggle", "size": "422,56",  "image": "eq_button", "title": "Low",      "name": "on_1", "style": "BlackButtonLabel16" },
+				{ "type": "Toggle", "size": "422,110", "image": "eq_button", "title": "L-Mid",  "name": "on_2", "style": "BlackButtonLabel16" },
+			   	{ "type": "Toggle", "size": "422,164", "image": "eq_button", "title": "H-Mid", "name": "on_3", "style": "BlackButtonLabel16" },
+			  	{ "type": "Toggle", "size": "422,220", "image": "eq_button", "title": "High",     "name": "on_4", "style": "BlackButtonLabel16" },
+			  
+			 	{	"type": "CurveView",
+					"size": "74,57,332,207",
+					"image": "",
+					"handle": "eq_ball",
+			  		"offLineColor": "#666666",
+					"style": { "forecolor": "#b2c4dc" },
+					"name": "all_on",
+					"numBands": 4,
+					"bufferedDraw": 0,
+					"bands":
+					[
+						{"type": "type_1", "gain": "gain_1", "q": "q_1", "freq": "freq_1", "active": "on_1", "selected": "dummy_select", "handle": "eq_ball"},
+						{"type": "type_2", "gain": "gain_2", "q": "q_2", "freq": "freq_2", "active": "on_2", "selected": "dummy_select", "handle": "eq_ball"},
+						{"type": "type_3", "gain": "gain_3", "q": "q_3", "freq": "freq_3", "active": "on_3", "selected": "dummy_select", "handle": "eq_ball"},
+						{"type": "type_4", "gain": "gain_4", "q": "q_4", "freq": "freq_4", "active": "on_4", "selected": "dummy_select", "handle": "eq_ball"}
+					],
+					"hpf": "hpf",
+					"displayRange": { "minFreq": 20, "maxFreq": 20000, "minLevel": -15, "maxLevel": 15 }
+				},
+			 
+				{ "type": "Toggle", "size": "78,61", "image": "eq_low_shelf", "name": "low_shelf" },
+				{ "type": "Toggle", "size": "342,61", "image": "eq_high_shelf", "name": "high_shelf" }
+			]
+		}
+	 ]
+}

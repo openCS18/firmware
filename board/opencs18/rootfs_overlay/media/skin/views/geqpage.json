@@ -1,0 +1,61 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "titled_header_background", "children" :
+			[
+				
+				{ "type": "TextBox", "size": "5,10,150,25", "name": "mainscreen/geq_page/selected_title", "style": "HeaderChNumber" },
+			 
+				{ "type": "Label", "size": "0,10,480,24", "title": "GEQ", "style": "HeaderTitle" },
+				
+				{ "type": "TextBox", "size": "343,15,50,17", "name": "mainscreen/header/focus_param_name", "style": "HeaderFocusLabel" },
+				{ "type": "TextBox", "size": "403,4,72,34", "name": "mainscreen/header/focus_param_value", "style": "HeaderFocusValue" },
+			
+			
+				{ "type": "VariantView", "name": "mainscreen/geq_page/geq_available",  "size": "0,0,480,272", "children" :
+					[
+						{ "type": "TextBox", "name": "mainscreen/geq_page/geq_prompt", "size": "0,125,480,24", "style": "Label24" },
+			  
+						{
+							"children" :
+							[
+			 
+								{ "type": "Button", "title": "Presets", "style": "ButtonLabelMedium", "size": "180,60", "image": "button_medium", "name": "mainscreen/geqPresetsPage" },
+								{ "type": "Toggle", "size": "80,60", "image": "power_button", "name": "mainscreen/geq_page/geq_on" },
+								
+								{ "size": "0,0,480,272", "controller":"mainscreen/geq_page", "children" :
+									[
+										{ "type": "GeqItem", "size": "0,100,30,156",  "def": { "$i": "1"} },
+										{ "type": "GeqItem", "size": "30,100,30,156",  "def": { "$i": "2"} },
+										{ "type": "GeqItem", "size": "60,100,30,156",  "def": { "$i": "3"} },
+										{ "type": "GeqItem", "size": "90,100,30,156",  "def": { "$i": "4"} },
+										{ "type": "GeqItem", "size": "120,100,30,156",  "def": { "$i": "5"} },
+										{ "type": "GeqItem", "size": "150,100,30,156",  "def": { "$i": "6"} },
+										{ "type": "GeqItem", "size": "180,100,30,156",  "def": { "$i": "7"} },
+										{ "type": "GeqItem", "size": "210,100,30,156",  "def": { "$i": "8"} },
+										{ "type": "GeqItem", "size": "240,100,30,156",  "def": { "$i": "9"} },
+										{ "type": "GeqItem", "size": "270,100,30,156",  "def": { "$i": "10"} },
+										{ "type": "GeqItem", "size": "300,100,30,156",  "def": { "$i": "11"} },
+										{ "type": "GeqItem", "size": "330,100,30,156",  "def": { "$i": "12"} },
+										{ "type": "GeqItem", "size": "360,100,30,156",  "def": { "$i": "13"} },
+										{ "type": "GeqItem", "size": "390,100,30,156",  "def": { "$i": "14"} },
+										{ "type": "GeqItem", "size": "420,100,30,156",  "def": { "$i": "15"} },
+										{ "type": "GeqItem", "size": "450,100,30,156",  "def": { "$i": "16"} },
+								  
+										{ "type": "Button",	"size": "5,54", "image": "left_arrow", "name": "page-left" },
+										{ "type": "Button", "size": "438,54", "image": "right_arrow",	"name": "page-right" }
+									]
+								}
+							
+							]
+					 
+						}
+			 		]
+		 		}
+		 	]
+		 }
+	 ]
+}

@@ -1,0 +1,46 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+		
+		{ "type": "TextBox", "size": "0,10,480,24", "name": "mainscreen/geq_presets/selected_title", "style": "HeaderTitle" },
+		{ "type": "Button",  "image": "back_arrow", "name": "mainscreen/geqPage" },
+	 
+		{ "type": "VariantView", "name": "mainscreen/geq_presets/geq_available",  "size": "0,0,480,272", "children" :
+			 [
+				{
+					"children" :
+					[
+						{ "type": "TextBox", "name": "mainscreen/geq_presets/geq_prompt", "size": "0,125,480,24", "style": "Label24" }
+					]
+				 },
+			  
+				 {
+					"children" :
+					[
+					   { "type": "TextBox",  "size": "10,55,130,30", "name": "mainscreen/geq_presets/target-title", "style": "LabelLeft24" },
+						
+						{
+							"size": "0,0,480,272", "controller":"mainscreen/geq_presets", "children" :
+							[
+								{ "type": "PresetItem", "size": "10,90",  "def": { "$i": "1"} },
+								{ "type": "PresetItem", "size": "10,125", "def": { "$i": "2"} },
+								{ "type": "PresetItem", "size": "10,160", "def": { "$i": "3"} },
+								{ "type": "PresetItem", "size": "10,195", "def": { "$i": "4"} },
+								{ "type": "PresetItem", "size": "10,230", "def": { "$i": "5"} },
+								
+								{ "type": "Button",	"size": "422,49", "image": "arrow_page_up", "name": "page-up" },
+								{ "type": "Button",	"size": "422,100", "image": "arrow_up", "name": "one-up"	},
+								{ "type": "Button",	"size": "422,172", "image": "arrow_down", "name": "one-down"	},
+								{ "type": "Button", "size": "422,223", "image": "arrow_page_down",	"name": "page-down" }															
+							]
+						 }
+					]
+				}
+			]
+		}
+	 ]
+}

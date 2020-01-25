@@ -1,0 +1,78 @@
+{
+	"width": 64,
+	"height": 96,
+	"style": {"backcolor": "#000000"},
+	"children":
+	[	 
+		{ "type": "VariantView", "name": "/scribble-strip-test-active", "children":
+			[
+				{ "children" :
+					[
+						{ "type": "VariantView", "name": "/mapping/dawMode", "children" : 
+							[
+								{ "children" : 
+									[
+										{ "type": "TextBox", "name": "label", "size": "0,5,64,20", "style": {"textalign": "center", "texttrim": "middle" } },
+										{ "type": "TextBox", "name": "number", "size": "0,28,64,24", "style": {"textalign": "center", "font": "Nimbus24Mono" } },
+										
+										{ "type": "VariantView", "name": "linked", "size": "0,51,64,14", "children":
+											[
+												{},
+											 
+												{ "type": "VariantView", "name": "leftSide", "size": "0,0,64,14", "children":
+													[
+														{ "type": "ImageView", "image": "scribble_link_right", "size": "0,0" },
+														{ "type": "ImageView", "image": "scribble_link_left", "size": "0,0" }
+													]
+												}
+											]
+										}		
+									]
+								},
+								{ "children" : 
+									[
+										{ "type": "TextBox", "name": "label", "size": "0,4,64,16", "style": { "textalign": "center", "texttrim": "middle" } },
+										{ "type": "VariantView", "name": "recordEnable", "children":
+											[
+												{ "type": "TextBox", "name": "number", "size": "0,22,64,24", "style": {"textalign": "center", "font": "Nimbus24Mono"} },
+												{ "children": 
+													[
+														{ "type": "ImageView", "size": "0,22,64,24", "options": "colorize", "style": {"backcolor": "#FFFFFF"} },		
+														{ "type": "TextBox", "name": "number", "size": "0,22,64,24", "style": {"textalign": "center", "font": "Nimbus24Mono", "textcolor": "#01"} }
+													]
+												}						
+											]
+										},
+										{ "type": "TextBox", "name": "info", "size": "0,47,64,16", "style": { "textalign": "center" } }				
+									]
+								}
+							]
+						},
+	 					{ "type": "VariantView", "name": "/mainscreen/dawFxPage", "children":
+							[
+								{ "type": "VariantView", "name": "/mapping/midiMode", "children":
+									[
+										{ "type": "ScribblePanControl", "name": "pan", "size": "0,66,64,30", "image": "scribble_pan", "style": {"forecolor": "#ffffff"}	},
+										{ "type": "ScribbleMcuVpotControl", "name": "pan", "size": "0,66,64,30", "image": "scribble_pan", "style": {"backcolor": "#000000", "forecolor": "#FFFFFF"}	}
+									]
+								},
+								{ "children":
+									[
+										{ "type": "ImageView", "size": "0,70,64,24", "options": "colorize", "style": {"backcolor": "#FFFFFF"} },		
+										{ "type": "TextBox", "name": "encoderInfo", "size": "0,70,64,24", "style": {"textalign": "center",  "texttrim": "right", "textcolor": "#01"} }
+									] 								
+								}
+							]
+						}
+					]
+				},
+				{ "type": "VariantView", "name": "/scribble-strip-screen-choice", "children":
+					[
+						{ "type": "ImageView", "image": "scribble_test_1" },
+						{ "type": "ImageView", "image": "scribble_test_2" }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"children" :
+	[
+		 { "type": "Toggle",  "size": "0,0", "image": "channel_cat_list_item", "name": "cat-selected_$i" },
+		 { "type": "VariantView", "name": "cat-selected_$i", "size": "0,0,100,28", "children" :
+			[
+			 { "type": "TextBox", "name": "cat-name_$i", "size": "0,0,100,28", "style": "PresetTextItem1" },
+			 { "type": "TextBox", "name": "cat-name_$i", "size": "0,0,100,28", "style": "PresetTextItem2" }
+			]
+		 }
+	]
+}

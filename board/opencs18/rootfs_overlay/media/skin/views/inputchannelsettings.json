@@ -1,0 +1,85 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller":"mainscreen/channelinfo",
+	"children" :
+	[
+
+
+		{ "type": "RadioButton", "size": "10,66", "image": "button_small", "name": "infoPage", "radiovalue": 0, "title": "Source", "style": "ButtonLabel16" },
+		{ "type": "RadioButton", "size": "10,104", "image": "button_small", "name": "infoPage",	"radiovalue": 1, "title": "Ch. Type", "style": "ButtonLabel16" },
+
+		{ "type": "RadioButton", "size": "10,142", "image": "button_group_left", "name": "prepost", "radiovalue": 0, "title": "Pre", "style": "ButtonLabel16" },
+		{ "type": "RadioButton", "size": "50,142", "image": "button_group_right", "name": "prepost",	"radiovalue": 1, "title": "Post", "style": "ButtonLabel16" },
+	 
+		{ "type": "Label", "title": "Ch. Color:", "size": "15,175,100,20", "style": "LabelLeftDimMedium" },
+	 
+		{ "type": "ColorButton", "size": "15,200,72,44", "image": "channel_no_color", "name": "infoPage", "radiovalue": 2, "style": "ButtonLabel16" },
+	 
+
+		{ "type": "VariantView", "name": "infoPage", "size": "105,0", "children" :
+			[
+				{ "children" :
+					[
+						{ "type": "RadioButton", "size": "0,66", "image": "button_wide", "name": "ch_source",	"radiovalue": 0, "title": "Analog", "style": "ButtonLabel16"	},
+						{ "type": "RadioButton", "size": "0,104", "image": "button_wide", "name": "ch_source", "radiovalue": 1, "title": "Firewire", "style": "ButtonLabel16" },
+						{ "type": "RadioButton", "size": "0,142", "image": "button_wide", "name": "ch_source", "radiovalue": 2, "title": "Network", "style": "ButtonLabel16" }
+					]
+				},
+			  
+				{
+					"size": "0,0,370,272", "children" :
+					[
+						{ "type": "Label", "title": "Category", "size": "0,50,100,20", "style": "ButtonLabelMedium" },
+					 	{ "type": "ChannelCategoryItem", "size": "0,80,100,28",  "def": { "$i": "1"} },
+						{ "type": "ChannelCategoryItem", "size": "0,118,100,28", "def": { "$i": "2"} },
+						{ "type": "ChannelCategoryItem", "size": "0,157,100,28", "def": { "$i": "3"} },
+						{ "type": "ChannelCategoryItem", "size": "0,195,100,28", "def": { "$i": "4"} },
+						{ "type": "ChannelCategoryItem", "size": "0,234,100,28", "def": { "$i": "5"} },
+					 	{ "type": "Button",	"size": "107,49", "image": "arrow_page_up", "name": "cat-page-up" },
+						{ "type": "Button",	"size": "107,100", "image": "arrow_up", "name": "cat-one-up"	},
+						{ "type": "Button",	"size": "107,172", "image": "arrow_down", "name": "cat-one-down"	},
+						{ "type": "Button",	"size": "107,223", "image": "arrow_page_down",	"name": "cat-page-down" },
+					 
+						{ "type": "Label", "title": "Instrument", "size": "157,50,165,20", "style": "ButtonLabelMedium" },
+						{ "type": "ChannelInstrumentItem", "size": "157,80,165,28",  "def": { "$i": "1"} },
+						{ "type": "ChannelInstrumentItem", "size": "157,118,165,28", "def": { "$i": "2"} },
+						{ "type": "ChannelInstrumentItem", "size": "157,157,165,28", "def": { "$i": "3"} },
+						{ "type": "ChannelInstrumentItem", "size": "157,195,165,28", "def": { "$i": "4"} },
+						{ "type": "ChannelInstrumentItem", "size": "157,234,165,28", "def": { "$i": "5"} },
+						{ "type": "Button",	"size": "329,49", "image": "arrow_page_up", "name": "instr-page-up" },
+						{ "type": "Button",	"size": "329,100", "image": "arrow_up", "name": "instr-one-up"	},
+						{ "type": "Button",	"size": "329,172", "image": "arrow_down", "name": "instr-one-down"	},
+						{ "type": "Button",	"size": "329,223", "image": "arrow_page_down",	"name": "instr-page-down" }
+					]
+				},
+			 
+				{
+					"size": "35,67,370,272", "children" :
+					[
+						{ "type": "RadioToggleButton", "size": "0,0", "image": "channel_color_1", "name": "ch_color", "radiovalue": 1 },
+						{ "type": "RadioToggleButton", "size": "0,45", "image": "channel_color_2", "name": "ch_color", "radiovalue": 2 },
+						{ "type": "RadioToggleButton", "size": "0,90", "image": "channel_color_3", "name": "ch_color", "radiovalue": 3 },
+						{ "type": "RadioToggleButton", "size": "0,135", "image": "channel_color_4", "name": "ch_color", "radiovalue": 4 },
+					 
+						{ "type": "RadioToggleButton", "size": "73,0", "image": "channel_color_5", "name": "ch_color", "radiovalue": 5 },
+						{ "type": "RadioToggleButton", "size": "73,45", "image": "channel_color_6", "name": "ch_color", "radiovalue": 6 },
+						{ "type": "RadioToggleButton", "size": "73,90", "image": "channel_color_7", "name": "ch_color", "radiovalue": 7 },
+						{ "type": "RadioToggleButton", "size": "73,135", "image": "channel_color_8", "name": "ch_color", "radiovalue": 8 },
+					 
+						{ "type": "RadioToggleButton", "size": "146,0", "image": "channel_color_9", "name": "ch_color", "radiovalue": 9 },
+						{ "type": "RadioToggleButton", "size": "146,45", "image": "channel_color_10", "name": "ch_color", "radiovalue": 10 },
+						{ "type": "RadioToggleButton", "size": "146,90", "image": "channel_color_11", "name": "ch_color", "radiovalue": 11 },
+						{ "type": "RadioToggleButton", "size": "146,135", "image": "channel_color_12", "name": "ch_color", "radiovalue": 12 },
+					 
+						{ "type": "RadioToggleButton", "size": "219,0", "image": "channel_color_13", "name": "ch_color", "radiovalue": 13 },
+						{ "type": "RadioToggleButton", "size": "219,45", "image": "channel_color_14", "name": "ch_color", "radiovalue": 14 },
+						{ "type": "RadioToggleButton", "size": "219,90", "image": "channel_color_15", "name": "ch_color", "radiovalue": 15 },
+						{ "type": "RadioToggleButton", "size": "219,135", "image": "channel_color_16", "name": "ch_color", "radiovalue": 16 }
+					]
+				}
+			]
+		}
+	 ]
+}

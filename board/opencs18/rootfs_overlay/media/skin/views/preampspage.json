@@ -1,0 +1,13 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/preamps",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background"},
+		{ "type": "PageHeader"  },
+	 
+		{ "type": "Label", "size": "0,60,480,24", "title": "Fat Channel encoders set to Preamp Level.", "style": "HeaderTitle" }				
+	]
+}

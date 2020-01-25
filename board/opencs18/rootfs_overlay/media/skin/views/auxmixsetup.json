@@ -1,0 +1,32 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/auxmix",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+		
+		{ "type": "Label",  "size": "0,10,480,24",	"title": "Aux Mix Routing", "style": "HeaderTitle" },
+		{ "type": "Button",	"image": "back_arrow", "name": "/mainscreen/systemPage" },
+	 
+		{ "type": "AuxMixItem", "size": "0,58",  "def": { "$i": "01"} },
+		{ "type": "AuxMixItem", "size": "0,93",  "def": { "$i": "02"} },
+		{ "type": "AuxMixItem", "size": "0,128",  "def": { "$i": "03"} },
+		{ "type": "AuxMixItem", "size": "0,163",  "def": { "$i": "04"} },
+		{ "type": "AuxMixItem", "size": "0,198",  "def": { "$i": "05"} },
+		{ "type": "AuxMixItem", "size": "0,233",  "def": { "$i": "06"} },
+	 
+		{ "type": "AuxMixItem", "size": "160,58",  "def": { "$i": "07"} },
+		{ "type": "AuxMixItem", "size": "160,93",  "def": { "$i": "08"} },
+		{ "type": "AuxMixItem", "size": "160,128",  "def": { "$i": "09"} },
+		{ "type": "AuxMixItem", "size": "160,163",  "def": { "$i": "10"} },
+		{ "type": "AuxMixItem", "size": "160,198",  "def": { "$i": "11"} },
+		{ "type": "AuxMixItem", "size": "160,233",  "def": { "$i": "12"} },
+	 
+		{ "type": "AuxMixItem", "size": "320,58",  "def": { "$i": "13"} },
+		{ "type": "AuxMixItem", "size": "320,93",  "def": { "$i": "14"} },
+		{ "type": "AuxMixItem", "size": "320,128",  "def": { "$i": "15"} },
+		{ "type": "AuxMixItem", "size": "320,163",  "def": { "$i": "16"} }
+	 ]
+}

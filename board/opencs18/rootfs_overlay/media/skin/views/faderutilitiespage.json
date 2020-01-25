@@ -1,0 +1,25 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+	 
+		{ "type": "Label",	"size": "0,10,480,24", "title": "Fader Utilities",  "style": "HeaderTitle"	},
+		{ "type": "Button",	"image": "back_arrow", "name": "/diagnostics"  },
+	 
+		{ "type": "Label", "size": "270,70,180,25", "title": "Touch Sensitivity",	"style": "LabelLarge" },
+		{ "type": "TextBox", "size": "300,125,50,30", "name": "/sensitivity-number", "style": "LabelLeft24" },
+		{ "type": "Button",	"size": "340,120", "image": "arrow_up", "name": "sensitivity-up"	},
+		{ "type": "Button",	"size": "390,120", "image": "arrow_down", "name": "sensitivity-down"	},
+	 
+		{ "type": "Label", "size": "20,70,180,25", "title": "Fader Speed",	"style": "LabelLarge" },
+		{ "type": "TextBox", "size": "20,125,50,30", "name": "/speed-number", "style": "LabelLeft24" },
+		{ "type": "Button",	"size": "60,120", "image": "arrow_up", "name": "speed-up"	},
+		{ "type": "Button",	"size": "110,120", "image": "arrow_down", "name": "speed-down"	},
+	 
+		{ "type": "Toggle", "size": "35,200,180,40", "name": "cal-fader",	"title": "Calibrate Faders", "style": "TextButtonLabelLarge", "options": "transparent" }
+
+	 ]
+}

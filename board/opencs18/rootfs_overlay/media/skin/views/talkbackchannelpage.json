@@ -1,0 +1,50 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/talkback",
+	"children" :
+	[
+	 { "type": "ImageView", "image": "talkback_background","children" :
+		[
+		 { "type": "Label", "size": "0,12,150,24", "title": "Talkback Source:", "style": "Label16" },
+
+		 { "type": "SelectBox", "size": "156,8",	"image": "dropdown_medium",	"name": "tb_src", "style": "SelectBoxLarge", "menurect": "156,36,125,230"},
+		 
+		 { "type": "VariantView", "name": "/mapping/dawMode", "size": "300,6", "children" :
+			[
+			 { "type": "VariantView", "name": "/mainscreen/ucnet/mixerConnected", "children" :
+				[
+				 {},
+				 { "type": "Toggle", "size": "0, 0,32,32", "image": "header_settings_icon",	"name": "/mainscreen/talkbackChannelPage" }
+				]
+			 },
+			 {}
+			]
+		 },
+	  
+		 { "type": "VariantView", "name": "cs18_tb_src", "size": "0, 0, 480, 272", "children" :
+			[
+			 {},
+			 { "children":
+				[
+				 { "type": "Label", "size": "0,200,240,24", "title": "Phantom Power", "style": "Label24" },
+				 { "type": "Label", "size": "240,110,240,24", "title": "Talkback Level:", "style": "Label24" },
+				 { "type": "Toggle", "size": "58,120",  "image": "talkbackgrid_button", "title": "48v", "name": "power_ch_1", "style": "Label24"},
+				 { "type": "Slider",	"name": "level_ch_1", "size": "300,180,125,20",	"style": "SliderBlueStyle" }
+				]
+			 },
+			 { "children":
+				[
+				 { "type": "Label", "size": "0,200,240,24", "title": "Phantom Power", "style": "Label24" },
+				 { "type": "Label", "size": "240,110,240,24", "title": "Talkback Level:", "style": "Label24" },
+				 { "type": "Toggle", "size": "58,120",  "image": "talkbackgrid_button", "title": "48v", "name": "power_ch_2", "style": "Label24" },
+				 { "type": "Slider",	"name": "level_ch_2", "size": "300,180,125,20",	"style": "SliderBlueStyle" }
+				]
+			 }
+			]
+		 }
+		]
+	 }
+	]
+}

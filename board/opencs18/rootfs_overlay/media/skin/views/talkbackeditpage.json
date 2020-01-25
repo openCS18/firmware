@@ -1,0 +1,52 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/talkback",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "talkback_background","children" :
+			[
+			 
+			 { "type": "Label", "size": "0,12,150,24", "title": "Talkback Source:", "style": "Label16" },
+			 
+			 { "type": "SelectBox", "size": "156,8",	"image": "dropdown_medium",	"name": "tb_src", "style": "SelectBoxLarge", "menurect": "156,36,125,230"},
+			 
+			 { "type": "VariantView", "name": "/mapping/dawMode", "size": "300,6", "children" :
+				[
+			  
+				 { "type": "VariantView", "name": "/mainscreen/ucnet/mixerConnected", "children" :
+					[
+					 {},
+					 { "type": "Toggle", "size": "0, 0,32,32", "image": "header_settings_icon",	"name": "/mainscreen/talkbackChannelPage" }
+					 ]
+				 },
+				 {}
+				]
+			 },
+		
+			 { "type": "Label", "size": "0,60,480,24", "title": "Talkback Routing", "style": "Label24" },
+			 
+			 { "type": "Toggle", "size": "2,94", "name": "tb_asn_mix_01", "image": "talkbackgrid_button", "title": "Mix 1", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "122,94", "name": "tb_asn_mix_02", "image": "talkbackgrid_button", "title": "Mix 2", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "242,94", "name": "tb_asn_mix_03", "image": "talkbackgrid_button", "title": "Mix 3", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "362,94", "name": "tb_asn_mix_04", "image": "talkbackgrid_button", "title": "Mix 4", "style": "ButtonLabel16TB" },
+			 
+			 { "type": "Toggle", "size": "2,138", "name": "tb_asn_mix_05", "image": "talkbackgrid_button", "title": "Mix 5", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "122,138", "name": "tb_asn_mix_06", "image": "talkbackgrid_button", "title": "Mix 6", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "242,138", "name": "tb_asn_mix_07", "image": "talkbackgrid_button", "title": "Mix 7", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "362,138", "name": "tb_asn_mix_08", "image": "talkbackgrid_button", "title": "Mix 8", "style": "ButtonLabel16TB" },
+			 
+			 { "type": "Toggle", "size": "2,182", "name": "tb_asn_mix_09", "image": "talkbackgrid_button", "title": "Mix 9", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "122,182", "name": "tb_asn_mix_10", "image": "talkbackgrid_button", "title": "Mix 10", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "242,182", "name": "tb_asn_mix_11", "image": "talkbackgrid_button", "title": "Mix 11", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "362,182", "name": "tb_asn_mix_12", "image": "talkbackgrid_button", "title": "Mix 12", "style": "ButtonLabel16TB" },
+			 
+			 { "type": "Toggle", "size": "2,226", "name": "tb_asn_mix_13", "image": "talkbackgrid_button", "title": "Mix 13", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "122,226", "name": "tb_asn_mix_14", "image": "talkbackgrid_button", "title": "Mix 14", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "242,226", "name": "tb_asn_mix_15", "image": "talkbackgrid_button", "title": "Mix 15", "style": "ButtonLabel16TB" },
+			 { "type": "Toggle", "size": "362,226", "name": "tb_asn_mix_16", "image": "talkbackgrid_button", "title": "Mix 16", "style": "ButtonLabel16TB" }
+			]
+		}
+	 ]
+}

@@ -1,0 +1,39 @@
+{
+	"width": 480, 
+	"height": 272,
+	"controller": "/mainscreen/capture/dialog", 
+	"children" :
+	[		
+		{ "type": "TextBox", "size": "20,60,440,160", "name": "dialogText", "style": "LabelLeft16" , "options":"multiline"},
+	
+		{ "type": "VariantView", "name": "numButtons", "size": "0,220", "children" : 
+			[
+				{},	
+				{ "size": "200,0",  "children" : 
+					[
+						{ "type": "Button",	"size":"0,0", "image": "button_small", "name": "buttonPush1"},
+						{ "type": "TextBox", "size": "3,0,70,28", "name": "buttonTitle1", "style": "Label16" }
+					]
+				},
+				{ "size": "150,0",  "children" : 
+					[
+						{ "type": "Button",	"size":"0,0", "image": "button_small", "name": "buttonPush1"},
+						{ "type": "TextBox", "size": "3,0,70,28", "name": "buttonTitle1", "style": "Label16" },
+						{ "type": "Button",	"size":"100,0", "image": "button_small", "name": "buttonPush2"},
+						{ "type": "TextBox", "size": "103,0,70,28", "name": "buttonTitle2", "style": "Label16" }
+					]
+				},
+				{ "size": "100,0",  "children" : 
+					[
+						{ "type": "Button",	"size":"0,0", "image": "button_small", "name": "buttonPush1" },
+						{ "type": "TextBox", "size": "3,0,70,28", "name": "buttonTitle1", "style": "Label16" },
+						{ "type": "Button",	"size":"100,0", "image": "button_small", "name": "buttonPush2" },
+						{ "type": "TextBox", "size": "103,0,70,28", "name": "buttonTitle2", "style": "Label16" },
+						{ "type": "Button",	"size":"200,0", "image": "button_small", "name": "buttonPush3" },
+						{ "type": "TextBox", "size": "203,0,70,28", "name": "buttonTitle3", "style": "Label16" }
+					]
+				}
+			]
+		}
+	]
+}

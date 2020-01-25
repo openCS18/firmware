@@ -1,0 +1,93 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background",
+		  "children" :
+		  [
+			{  "type": "PageHeader"  },
+		   
+			{
+				"type": "Button",
+				"image": "back_arrow",
+				"name": "mainscreen/startPage"
+			},
+		   
+			{
+				"type": "Label",
+				"size": "150,62,180,20",
+				"title": "Select an FX to edit:",
+				"style": "Label24"
+			},
+		   
+			{
+				"type": "Button",
+				"size": "70,100,80,30",
+				"title": "FX A",
+				"name": "mainscreen/fxhome/fxedit_a",
+				"style": "ButtonLabel24FX",
+		   		"options": "transparent"
+			},
+		   
+			{
+				"type": "TextBox",
+				"size": "50,130,120,17",
+				"name": "mainscreen/fxhome/fxType_a",
+				"style": "ButtonLabel16"
+			},
+		   
+			{
+				"type": "Button",
+				"size": "310,100,80,30",
+				"title": "FX B",
+				"name": "mainscreen/fxhome/fxedit_b",
+				"style": "ButtonLabel24FX",
+				"options": "transparent"
+			},
+		   
+			{
+			   "type": "TextBox",
+			   "size": "290,130,120,17",
+			   "name": "mainscreen/fxhome/fxType_b",
+			   "style": "ButtonLabel16"
+			},
+		   
+			{
+				"type": "Button",
+				"size": "70,200,80,30",
+				"title": "FX C",
+				"name": "mainscreen/fxhome/fxedit_c",
+				"style": "ButtonLabel24FX",
+		   		"options": "transparent"
+			},
+		   
+			{
+			   "type": "TextBox",
+			   "size": "50,230,120,17",
+			   "name": "mainscreen/fxhome/fxType_c",
+			   "style": "ButtonLabel16"
+			},
+		   
+
+			{
+				"type": "Button",
+				"size": "310,200,80,30",
+				"title": "FX D",
+				"name": "mainscreen/fxhome/fxedit_d",
+				"style": "ButtonLabel24FX",
+		   		"options": "transparent"
+			},
+		   
+			{
+			   "type": "TextBox",
+			   "size": "290,230,120,17",
+			   "name": "mainscreen/fxhome/fxType_d",
+			   "style": "ButtonLabel16"
+			}
+		   
+		   ]
+		}
+	]
+}

@@ -1,0 +1,87 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "start_background", "children" :
+			[
+				{ "type": "PageHeader" },
+		   
+				{ "type": "Button",  "image": "back_arrow", "name": "mainscreen/fxHomePage" },
+
+		   		{ "type": "SelectBox", "size": "100,60", "image": "dropdown_large",	"name": "mainscreen/fxedit/fxType",	"style": "SelectBoxLarge"	},
+				
+				{ "type": "Button", "title": "Presets", "style": "ButtonLabelMedium", "size": "352,60", "image": "button_medium", "name": "mainscreen/fxPresetsPage" },
+				
+				{ "type": "TextBox",  "size": "100,110,120,17",  "name": "mainscreen/fxedit/fxParam1name",  "style": "LabelLeft16"	},		   
+				{ "type": "Label",  "size": "10,60,30,30", "title": "FX", "style": "Label24" },
+		   
+				{ "type": "VariantView", "name": "mainscreen/fxhome/selected_fx", "size": "40,60,30,30", "children" :
+					[
+						{ "type": "Label",  "size": "0,0,30,30", "title": "A", "style": "Label24" },
+						{ "type": "Label",  "size": "0,0,30,30", "title": "B", "style": "Label24" },
+						{ "type": "Label",  "size": "0,0,30,30", "title": "C", "style": "Label24" },
+						{ "type": "Label",  "size": "0,0,30,30", "title": "D", "style": "Label24" }
+					]
+				},
+			 
+				{ "type": "VariantView", "name": "mainscreen/fxhome/selected_fx", "size": "8,100", "children" :
+					[
+						{ },
+						{ },
+						{ "type": "Toggle", "name": "mainscreen/fxedit/fxAssignTapC", "image": "assign_tap_button", "title": "Assign Tap", "style": "BlackButtonLabel16" },
+						{ "type": "Toggle", "name": "mainscreen/fxedit/fxAssignTapD", "image": "assign_tap_button", "title": "Assign Tap", "style": "BlackButtonLabel16" }
+					]
+				},
+
+				{ "type": "VariantView", "name": "mainscreen/fxedit/fxParam1visible", "size": "100,130,125,20", "children" :
+					[
+						{},
+						{ "type": "Slider",	"name": "mainscreen/fxedit/fxParam1", "size": "0,0,125,20",	"style": "SliderOrangeStyle" }						
+					]
+				},
+		   
+				{ "type": "TextBox", "size": "100,160,120,17", "name": "mainscreen/fxedit/fxParam2name", "style": "LabelLeft16" },		   
+				{ "type": "VariantView", "name": "mainscreen/fxedit/fxParam2visible", "size": "100,180,125,20", "children" :
+					[
+						{},
+						{ "type": "Slider",	"name": "mainscreen/fxedit/fxParam2","size": "0,0,125,20", "style": "SliderOrangeStyle"	}
+					]
+				},
+
+				{ "type": "TextBox", "size": "100,210,120,17",  "name": "mainscreen/fxedit/fxParam3name", "style": "LabelLeft16" },		   		   
+				{ "type": "VariantView", "name": "mainscreen/fxedit/fxParam3visible", "size": "100,230,125,20", "children" :
+					[
+						{},
+						{ "type": "Slider", "name": "mainscreen/fxedit/fxParam3", "size": "0,0,125,20",	"style": "SliderOrangeStyle"}
+					]
+				},
+		   
+				{ "type": "TextBox",  "size": "290,110,120,17", "name": "mainscreen/fxedit/fxParam4name", "style": "LabelLeft16"  },		   
+				{ "type": "VariantView", "name": "mainscreen/fxedit/fxParam4visible", "size": "290,130,125,20", "children" :
+					[
+						{},
+						{ "type": "Slider", "name": "mainscreen/fxedit/fxParam4", "size": "0,0,125,20", "style": "SliderOrangeStyle" }
+					]
+				},
+		   
+				{ "type": "TextBox", "size": "290,160,120,17", "name": "mainscreen/fxedit/fxParam5name", "style": "LabelLeft16" },		   
+				{ "type": "VariantView", "name": "mainscreen/fxedit/fxParam5visible", "size": "290,180,125,20", "children" :
+					[
+						{},
+						{ "type": "Slider", "name": "mainscreen/fxedit/fxParam5", "size": "0,0,125,20",	"style": "SliderOrangeStyle" }
+					]
+				},
+
+				{ "type": "TextBox", "size": "290,210,120,17", "name": "mainscreen/fxedit/fxParam6name", "style": "LabelLeft16" },		   
+				{ "type": "VariantView", "name": "mainscreen/fxedit/fxParam6visible", "size": "290,230,125,20", "children" :
+					[
+						{},
+						{ "type": "Slider", "name": "mainscreen/fxedit/fxParam6", "size": "0,0,125,20",	"style": "SliderOrangeStyle" }
+					]
+				}
+		  ]
+		}
+	]
+}

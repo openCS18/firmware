@@ -1,0 +1,9 @@
+{
+	"children" :
+	[
+		{ "type": "Button",  "size": "0,0", "image": "marker_button", "name": "locate_$i" },
+		{ "type": "TextBox", "size": "3,0,15,28", "name": "num_$i", "style": "LabelRight16" },
+		{ "type": "TextBox", "size": "30,0,260,28", "name": "name_$i", "style": "ButtonLabelLargeLeft" },
+		{ "type": "TextBox", "size": "250,0,150,28", "name": "time_$i", "style": "LabelRight24"}
+	]
+}

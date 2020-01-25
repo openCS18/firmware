@@ -1,0 +1,96 @@
+{
+	"width": 480,
+	"height": 272,
+	"style": "PageBack",
+	"controller": "mainscreen/firmware",
+	"children" :
+	[
+		{ "type": "ImageView", "image": "blank_background" },
+	 
+		{ "type": "Label",	"size": "0,10,480,24", "title": "Firmware Version",  "style": "HeaderTitle"	},
+		{ "type": "Button",	"image": "back_arrow", "name": "/mainscreen/systemPage"  },
+		{ "type": "Label",	"size": "240,80,240,30", "title": "CS18 AI", "style": "Label24" },
+	 
+		{ "type": "VariantView", "name": "/firmwareupdate/updatestate",  "size": "240,120,240,152", "children" :
+			[
+				{ "children" :
+					[
+						{ "type": "Label",	"size": "0,30,140,17", "title": "Firmware Version:", "style": "LabelRight16" },
+						{ "type": "TextBox", "size": "142,30,100,17", "name": "/system/version", "style": "LabelLeft16" },
+						{ "type": "Toggle", "size": "53,70,134,28", "name": "/firmwareupdate/checkupdate", "image": "button_large",	"title": "Check for update", "style": "ButtonLabel16" }
+					]
+				},
+				{ "children" :
+					[
+						{ "type": "Label",	"size": "0,30,240,17", "title": "CS18 will look for a firmware", "style": "Label14" },
+						{ "type": "Label",	"size": "0,50,240,17", "title": "image and perform an update.", "style": "Label14" },
+						{ "type": "Label",	"size": "0,70,240,17", "title": "Proceed?", "style": "Label14" },
+						{ "type": "Toggle", "size": "15,100,100,28", "name": "/firmwareupdate/cancel", "image": "button_large",	"title": "Back", "style": "ButtonLabel16" },
+						{ "type": "Toggle", "size": "125,100,100,28", "name": "/firmwareupdate/do_update", "image": "button_large",	"title": "OK", "style": "ButtonLabel16" }
+					]
+				},
+				{ "children" :
+					[
+						{ "type": "TextBox", "size": "0,30,240,17", "name": "/firmwareupdate/title", "style": "Label16" },
+						{ "type": "TextBox", "size": "0,60,240,17", "name": "/firmwareupdate/msg1", "style": "Label14" },
+						{ "type": "TextBox", "size": "0,90,240,17", "name": "/firmwareupdate/msg2", "style": "Label14" },
+						{ "type": "Slider",	"name": "/firmwareupdate/progress", "size": "40,120,160,16",	"style": "SliderBlueStyle" }
+					]
+				},
+				{ "children" :
+					[
+						{ "type": "TextBox", "size": "0,30,240,17", "name": "/firmwareupdate/title", "style": "Label16" },
+						{ "type": "TextBox", "size": "0,60,240,17", "name": "/firmwareupdate/msg1", "style": "Label14" },
+						{ "type": "TextBox", "size": "0,80,240,17", "name": "/firmwareupdate/msg2", "style": "Label14" },
+						{ "type": "Toggle", "size": "70,100,100,28", "name": "/firmwareupdate/cancel", "image": "button_large",	"title": "OK", "style": "ButtonLabel16" }
+					]
+				}
+			]
+		},
+	 
+		{ "type": "Label",	"size": "0,80,240,30", "title": "Mixer:", "style": "Label24" },
+		{ "type": "TextBox", "size": "0,110,240,17", "name": "/mainscreen/ucnet/selectedMixerName", "style": "Label16" },
+	 
+		{ "type": "VariantView", "name": "/mainscreen/ucnet/mixerConnected",  "size": "0,120,240,152", "children" :
+			[
+			 {},
+			 { "type": "VariantView", "name": "mixer_update_state",  "size": "0,0,240,152", "children" :
+				[
+				 { "children" :
+					[
+						{ "type": "Label",	"size": "0,30,140,17", "title": "Firmware Version:", "style": "LabelRight16" },
+						{ "type": "TextBox", "size": "140,30,100,17", "name": "mixer_version", "style": "LabelLeft16" },
+						{ "type": "Toggle", "size": "53,70,134,28", "name": "mixer_check_update", "image": "button_large",	"title": "Check for update", "style": "ButtonLabel16" }
+					 ]
+				 },
+				 { "children" :
+					[
+						{ "type": "Label",	"size": "0,30,240,17", "title": "Mixer will look for a firmware", "style": "Label14" },
+						{ "type": "Label",	"size": "0,50,240,17", "title": "image and perform an update.", "style": "Label14" },
+						{ "type": "Label",	"size": "0,70,240,17", "title": "Proceed?", "style": "Label14" },
+						{ "type": "Toggle", "size": "15,100,100,28", "name": "mixer_update_cancel", "image": "button_large",	"title": "Back", "style": "ButtonLabel16" },
+						{ "type": "Toggle", "size": "125,100,100,28", "name": "mixer_update_confirm", "image": "button_large",	"title": "OK", "style": "ButtonLabel16" }
+					]
+				 },
+				 { "children" :
+					[
+						{ "type": "TextBox", "size": "0,30,240,17", "name": "mixer_up_title", "style": "Label16" },
+						{ "type": "TextBox", "size": "0,60,240,17", "name": "mixer_up_msg1", "style": "Label14" },
+						{ "type": "TextBox", "size": "0,90,240,17", "name": "mixer_up_msg2", "style": "Label14" },
+						{ "type": "Slider",	"name": "mixer_up_progress", "size": "40,120,160,16",	"style": "SliderBlueStyle" }
+					]
+				 },
+				 { "children" :
+					[
+						{ "type": "TextBox", "size": "0,30,240,17", "name": "mixer_up_title", "style": "Label16" },
+						{ "type": "TextBox", "size": "0,60,240,17", "name": "mixer_up_msg1", "style": "Label14" },
+						{ "type": "TextBox", "size": "0,80,240,17", "name": "mixer_up_msg2", "style": "Label14" },
+						{ "type": "Toggle", "size": "70,100,100,28", "name": "mixer_update_cancel", "image": "button_large",	"title": "OK", "style": "ButtonLabel16" }
+					]
+				 }
+				]
+			 }
+			]
+		}
+	 ]
+}
