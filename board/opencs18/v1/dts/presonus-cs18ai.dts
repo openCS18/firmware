@@ -31,7 +31,8 @@
 		serial1 = &serial1;
 		serial2 = &serial2;
 		ethernet0 = &eth0;
-		spi0 = &spi1;
+		spi0 = &spi0;
+		spi1 = &spi1;
 	};
 
 	memory@c0000000 {
@@ -327,14 +328,23 @@
 &spi0 {
 	status = "okay";
 	pinctrl-names = "default";
-	pinctrl-0 = <&spi0_pins>, <&spi0_cs0_pin>, <&spi0_cs3_pin>;
+	pinctrl-0 = <&spi0_pins>, <&spi0_cs3_pin>;
+	spidev@3 {
+	    compatible = "spidev";
+	    spi-max-frequency = <20000000>;
+	    reg = <3>;
+	};
 };
 
 &spi1 {
 	status = "okay";
 	pinctrl-0 = <&spi1_pins>, <&spi1_cs0_pin>;
 	pinctrl-names = "default";
-//	cs-gpios = <&gpio 44 GPIO_ACTIVE_LOW>;
+	spidev@0 {
+	    compatible = "spidev";
+	    spi-max-frequency = <20000000>;
+	    reg = <0>;
+	};
 };
 
 &gpio {

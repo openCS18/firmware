@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mount /dev/sda1 /media
+
+cd /media
