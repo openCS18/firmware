@@ -1,6 +1,6 @@
 # add console=tty0 to output kernel messages on LCD screen
 
-setenv bootargs console=ttyS2,115200n8 quiet ubi.mtd=rootfs root=/dev/ram rw
+setenv bootargs console=ttyS2,115200n8 debug earlyprintk ubi.mtd=rootfs root=/dev/ram rw
 
 
 #mw.b send data to ttyS1
