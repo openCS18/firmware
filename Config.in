@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_OPENCS18_PATH/package/avdecc/Config.in"

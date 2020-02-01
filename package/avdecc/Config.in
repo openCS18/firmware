@@ -1,0 +1,8 @@
+config BR2_PACKAGE_AVDECC
+	bool "AVDECC"
+	select BR2_PACKAGE_NCURSES
+	select BR2_PACKAGE_LIBPCAP
+	help
+	  L-Acoustics AVDECC entity implementation
+
+	  https://github.com/openCS18/avdecc
