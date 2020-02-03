@@ -1,1 +1,14 @@
 source "$BR2_EXTERNAL_OPENCS18_PATH/package/avdecc/Config.in"
+
+config BR2_PACKAGE_OPENCS18_NFS_SERVER_ADDRESS
+        string "EDIT SCRIPT DIRECTLY! NFS server address"
+	default "212.116.109.58:/,vers=4,tcp"
+        help
+          The NFS server for speedup development
+
+config BR2_PACKAGE_OPENCS18_NFS_TARGET_IP_ADDRESS
+        string "EDIT SCRIPT DIRECTLY! Target IP address for NFS rootfs"
+	default "dhcp"
+        help
+          This address is passed as arg to kernel when booting from NFS rootfs
+
