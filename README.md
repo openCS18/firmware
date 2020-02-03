@@ -56,6 +56,7 @@ on USB stick. Then
 Spin the server on docker. We assume that you are sharing `~/projects/opencs` folder
 
 ```
+sudo modprobe nfs nfsd
 docker run \
   -v ~/projects/opencs:/nfsroot \
   -d --name 'openCS18_NFS' \
