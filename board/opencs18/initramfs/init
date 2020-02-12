@@ -1,0 +1,49 @@
+#!/bin/busybox sh
+
+/bin/busybox mkdir -p /usr/sbin /usr/bin /sbin /bin
+/bin/busybox --install -s
+
+cmdline() {
+    local value
+    value=" $(cat /proc/cmdline) "
+    value="${value##* ${1}=}"
+    value="${value%% *}"
+    [ "${value}" != "" ] && echo "${value}"
+}
+
+
+
+# Mount the /proc and /sys filesystems.
+mount -t proc none /proc
+mount -t sysfs none /sys
+mount -t devtmpfs none /dev
+
+VERS=1
+
+# Do your stuff here.
+echo "This script v$VERS just mounts and boots the rootfs, nothing else!"
+
+ROOT_MOUNT=/mnt/root
+
+WAITROOT=/dev/$(cmdline root)
+
+LOOP=$ROOT_MOUNT/$(cmdline loop)
+
+while [ ! -b $WAITROOT ] ; do sleep 1; echo "Waiting $WAITROOT ..."; done
+
+# Mount the root filesystem.
+mount -o ro $WAITROOT $ROOT_MOUNT
+
+echo Mounting $LOOP
+
+mkdir -p /loop && mount $LOOP /loop
+
+/bin/sh
+
+# Clean up.
+umount /proc
+umount /sys
+umount /dev
+
+# Boot the real thing.
+exec switch_root /mnt/root /linuxrc
