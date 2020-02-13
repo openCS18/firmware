@@ -1,8 +1,8 @@
 # add console=tty0 to output kernel messages on LCD screen
 
 # this substitution doesn't work, hardcoding
-#setenv bootargs console=ttyS2,115200n8 rdinit=/dev/null root=/dev/nfs rootfstype=nfs nfsroot=<nfsroot> rootwait rw ip=<ip>
-setenv bootargs console=ttyS2,115200n8 rdinit=/dev/null root=/dev/nfs rootfstype=nfs nfsroot=212.116.109.58:/,vers=4,tcp rootwait rw ip=dhcp
+#setenv bootargs console=ttyS2,115200n8 rdinit=/nonsense root=/dev/nfs rootfstype=nfs nfsroot=<nfsroot> rootwait rw ip=<ip>
+setenv bootargs console=ttyS2,115200n8 rdinit=/nonsense root=/dev/nfs rootfstype=nfs nfsroot=212.116.109.58:/,vers=4,tcp rootwait rw ip=dhcp
 
 #mw.b send data to ttyS1
 
