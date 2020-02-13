@@ -1,4 +1,5 @@
 source "$BR2_EXTERNAL_OPENCS18_PATH/package/avdecc/Config.in"
+source "$BR2_EXTERNAL_OPENCS18_PATH/package/virtual-touchscreen/Config.in"
 
 config BR2_PACKAGE_OPENCS18_NFS_SERVER_ADDRESS
         string "EDIT SCRIPT DIRECTLY! NFS server address"

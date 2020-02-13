@@ -1,0 +1,7 @@
+config BR2_PACKAGE_VIRTUAL_TOUCHSCREEN
+	bool "Virtual Touchscreen"
+	depends on BR2_LINUX_KERNEL
+	help
+	  Adds virtual evdev device, that can be triggered from userspace
+
+	  https://github.com/openCS18/virtual_touchscreen
