@@ -1,4 +1,6 @@
-# OpenCS18 Linux
+# OpenCS18
+
+Open source Linux platform for Presonus Studiolive CS18AI
 
 [![Become a patron!](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/bePatron?u=7980870) 
 
