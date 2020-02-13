@@ -18,7 +18,7 @@ mount -t proc none /proc
 mount -t sysfs none /sys
 mount -t devtmpfs none /dev
 
-VERS=1
+VERS=2
 
 # Do your stuff here.
 echo "This script v$VERS just mounts and boots the rootfs, nothing else!"
@@ -38,12 +38,10 @@ echo Mounting $LOOP
 
 mkdir -p /loop && mount $LOOP /loop
 
-/bin/sh
-
 # Clean up.
-umount /proc
-umount /sys
-umount /dev
+mount --move /sys /loop/sys
+mount --move /proc /loop/proc
+mount --move /dev /loop/dev
 
 # Boot the real thing.
-exec switch_root /mnt/root /linuxrc
+exec switch_root -c /dev/console /loop /sbin/init
